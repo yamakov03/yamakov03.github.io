@@ -6,7 +6,7 @@ function Contact() {
     <section id="contact" className="pt-[150px]">
       {/* HEADINGS */}
       <div className="flex">
-        <div className="flex flex-col lg:w-1/2 sm:w-full lg:items-end sm:items-center lg:me-20 mx-4">
+        <div className="flex flex-col lg:w-1/2 sm:w-full lg:items-end sm:items-center lg:me-20 mx-10">
           <div>
             <h3 className="text-4xl text-left font-Syne font-extrabold md:mb-10 sm:mb-10 items-left">
               Just say hi.
@@ -14,7 +14,7 @@ function Contact() {
             <p className="w-3/5">
               I'm always open to talk about jobs, projects, or research.
             </p>
-            <div class="py-4 mx-auto max-w-screen-md">
+            <div class="pt-4 mx-auto max-w-screen-md">
               <form accept-charset="utf-8" action="https://getform.io/f/a0f6c2b3-7152-453f-9c97-fc19c10be30d"
                       method="POST" novalidate class="space-y-8">
                 <div>
@@ -62,11 +62,11 @@ function Contact() {
                 <button
                   type="submit"
                   class="items-center justify-center
-                  rounded-xl border-2 border-black text-black bg-accent-color px-5 py-2
+                  rounded-xl border-2 border-black text-black bg-accent-color px-5 py-3
                   font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none 
                   focus:outline-none focus:ring-0 focus:shadow-none"
                 >
-                  Send message
+                  Send message ✉️
                 </button>
               </form>
             </div>

@@ -78,7 +78,7 @@
 #circle {
   position: relative;
   border-radius: 100%;
- 	animation: rotate-animation 8s infinite linear;
+ 	animation: rotate-animation 15s infinite linear;
 }
 
 #circle span {

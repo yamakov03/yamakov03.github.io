@@ -8,7 +8,7 @@ const Link = ({ page, Page, setPage }) => {
   return (
     <AnchorLink
     offset='50'
-      className="hover:text-secondary-color"
+      className="hover:text-secondary-color font-Darker_Grotesque min-[760px]:text-2xl sm:text-6xl"
       href={`#${lowerCasePage}`}
       onClick={() => setPage(lowerCasePage)}
     >
@@ -30,7 +30,7 @@ const Navbar = ({ isTopOfPage, Page, setPage }) => {
   return (
     <nav
       className={`${
-        isTopOfPage ? "" : "border-b-[1px] bg-white border-black"
+        isTopOfPage ? "" : "bg-white border-black border-b-[1px]"
       } z-40 w-full fixed top-0 py-2  `}
     >
       <div className="flex items-center justify-between mx-auto w-5/6 ">
@@ -69,7 +69,7 @@ const Navbar = ({ isTopOfPage, Page, setPage }) => {
         {isMobile && isToggled && (
           <div className="fixed right-0 bottom-0 h-full w-[300px] bg-white border-l-[1px] border-black">
             {/* MENU ITEMS */}
-            <div className="ml-[23%] text-6xl mt-[100px] font-Darker_Grotesque">
+            <div className="ml-[17%] mt-[20vh] font-Darker_Grotesque">
               <div className="mb-4">
                 <Link page="Home" Page={Page} setPage={setPage} />
               </div>

@@ -54,9 +54,9 @@ const Home = ({ setPage }) => {
         <div className="md:inline-flex items-center">
           <AnchorLink
             className="text-xl items-center justify-center
-            rounded-xl border-2 border-black text-black bg-accent-color px-10 py-4
+            rounded-xl border-2 border-black text-black bg-accent-color px-6 py-3
             font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none 
-            focus:outline-none focus:shadow-none focus:ring-0 w-[200px]"
+            focus:outline-none focus:shadow-none focus:ring-0 w-[170px]"
             href="#contact"
           >
             Say hello 👋
