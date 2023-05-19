@@ -15,8 +15,13 @@ function Contact() {
               I'm always open to talk about jobs, projects, or research.
             </p>
             <div class="pt-4 mx-auto max-w-screen-md">
-              <form accept-charset="utf-8" action="https://getform.io/f/a0f6c2b3-7152-453f-9c97-fc19c10be30d"
-                      method="POST" novalidate class="space-y-8">
+              <form
+                accept-charset="utf-8"
+                action="https://getform.io/f/a0f6c2b3-7152-453f-9c97-fc19c10be30d"
+                method="POST"
+                novalidate
+                class="space-y-8"
+              >
                 <div>
                   <label for="name" class="block mb-2 font-medium">
                     Your Name
@@ -61,8 +66,8 @@ function Contact() {
                 </div>
                 <button
                   type="submit"
-                  class="items-center justify-center
-                  rounded-xl border-2 border-black text-black bg-accent-color px-5 py-3
+                  class="items-center justify-center flex
+                  rounded-xl border-2 border-black text-black bg-accent-color px-4 py-3
                   font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none 
                   focus:outline-none focus:ring-0 focus:shadow-none"
                 >

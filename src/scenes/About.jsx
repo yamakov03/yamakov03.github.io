@@ -70,7 +70,7 @@ const About = () => {
           className="w-full lg:w-2/5 
       min-[1024px]:order-1 sm:order-2 
       lg:bg-secondary-color
-      sm:bg-secondary-color flex flex-wrap"
+      sm:bg-primary-color flex flex-wrap"
         >
           <div className="flex justify-center items-center basis-full">
             <div
@@ -79,7 +79,8 @@ const About = () => {
             block 
             min-[1024px]:w-[70%]
             sm:w-[70%]
-            sm:h-[350px]
+            md:h-[350px]
+            sm:h-[375px]
             sm:mt-10
             min-[1024px]:mt-[100px]    
             "
@@ -115,7 +116,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          <div className="flex basis-full items-end justify-end z-30 text-[300px] text-primary-color ">
+          <div className="flex basis-full items-end justify-end z-30 text-[300px] lg:text-primary-color sm:text-secondary-color ">
             <MdKeyboardDoubleArrowRight />
           </div>
         </div>
@@ -124,7 +125,7 @@ const About = () => {
         <div
           className="w-full lg:w-3/5 sm:order-1 min-[1024px]:order-2 lg:border-l-[1px] md:border-l-[0px] border-black 
       lg:bg-primary-color
-      sm:bg-secondary-color max-[1401px]:pt-[100px] justify-center items-center flex flex-wrap px-5"
+      sm:bg-primary-color max-[1401px]:pt-[100px] justify-center items-center flex flex-wrap px-5"
         >
           <h3 className="justify-center flex w-full text-4xl font-Syne font-extrabold text-black mb-10 lg:hidden sm:visible">
             About me.
@@ -168,15 +169,14 @@ const About = () => {
         </div>
       </div>
 
-      <div className="flex items-center max-[1023px]:w-1/2 sm:w-full justify-center">
-        <div className="flex flex-col min-[1023px]:py-[0px] sm:py-[70px] min-[1023px]:px-[5%] sm:px-[15%] ">
+      <div className="flex items-center max-[1024px]:w-1/2 sm:w-full justify-center">
+        <div className="flex flex-col min-[1024px]:py-[0px] sm:py-[70px] min-[1024px]:px-[5%] sm:px-[15%] ">
           <div className="">
-            <h3 className="text-4xl text-left font-Syne font-extrabold mb-5 items-left">
+            <h3 className="text-4xl text-left font-Syne font-extrabold mb-[40px] items-left">
               Education
             </h3>
             <p className="w-full">
-              <strong>The University of Texas at Austin</strong>
-              <br></br>
+              <p className="text-2xl w-full">The University of Texas at Austin</p>
               BS, MS Electrical and Computer Engineering<br></br>
               May 2021 - Present (Expected 2025)<br></br>
               <br></br>

@@ -31,7 +31,7 @@ const Navbar = ({ isTopOfPage, Page, setPage }) => {
     <nav
       className={`${
         isTopOfPage ? "" : "bg-white border-black border-b-[1px]"
-      } z-40 w-full fixed top-0 py-2  `}
+      } z-40 w-full fixed top-0 py-3  `}
     >
       <div className="flex items-center justify-between mx-auto w-5/6 ">
         <AnchorLink

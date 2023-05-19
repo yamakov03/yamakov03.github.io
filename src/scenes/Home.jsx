@@ -12,7 +12,7 @@ const Home = ({ setPage }) => {
       border-b-[1px] 
       border-black
       py-20
-      min-[1134px]:h-[100vh] 
+      min-[1399px]:h-[100vh] 
       min-[500px]:px-10
       sm:px-0"
     >
@@ -25,10 +25,10 @@ const Home = ({ setPage }) => {
       >
         <img
             alt="profile"
-            className="min-[600px]:max-w-[400px] md:max-w-[300px] unselect home__img z-10 h-auto"
+            className="min-[800px]:max-w-[500px] md:max-w-[300px] unselect home__img z-10 h-auto"
             src="assets/profileImg.jpg"
           />
-          <div className="absolute z-30 min-[600px]:pt-[200px] min-[600px]:ms-[-80px] sm:pt-[130px] sm:ms-[-60px] min-[600px]:text-[250px] sm:text-[200px] text-black">
+          <div className="absolute z-30 min-[800px]:pt-[200px] min-[800px]:ms-[-80px] sm:pt-[130px] sm:ms-[-60px] min-[800px]:text-[250px] sm:text-[200px] text-black">
             <RiArrowRightUpLine/>
           </div>
           
@@ -47,14 +47,14 @@ const Home = ({ setPage }) => {
       "
       >
         {/* HEADINGS */}
-        <p className="min-[600px]:text-8xl sm:text-6xl font-Syne">Daniel Yamakov</p>
-        <p className="mt-2 mb-10 md:text-3xl sm:text-xl">
+        <p className="min-[800px]:text-9xl sm:text-6xl font-Syne">Daniel Yamakov</p>
+        <p className="mt-2 mb-10 min-[800px]:text-4xl sm:text-xl">
           What's up! I'm studying software engineering at UT Austin
         </p>
         <div className="md:inline-flex items-center">
           <AnchorLink
             className="text-xl items-center justify-center
-            rounded-xl border-2 border-black text-black bg-accent-color px-6 py-3
+            rounded-xl border-2 border-black text-black bg-accent-color px-5 py-3
             font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none 
             focus:outline-none focus:shadow-none focus:ring-0 w-[170px]"
             href="#contact"
