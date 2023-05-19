@@ -4,7 +4,7 @@ import {AiFillGithub} from "react-icons/ai";
 
 const SocialMediaIcons = () => {
     return (
-      <div className="flex md:justify-start gap-7 md:ms-10 justify-center md:mt-0 mt-10 me-5">
+      <div className="flex md:justify-start gap-7 ">
         <a href="https://www.instagram.com/danielyamakov/" role="button">
             <AiOutlineInstagram className="text-5xl text__shadow"/>
             </a>

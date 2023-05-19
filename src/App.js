@@ -1,14 +1,15 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { useMediaQuery, useMediaQueries } from "@react-hook/media-query";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
+import Navbar from "./components/Nav";
+import Home from "./scenes/Home";
+import About from "./scenes/About";
+import Projects from "./scenes/Projects";
+import Contact from "./scenes/Contact";
+import Footer from "./scenes/Footer";
 
 function App() {
   const [Page, setPage] = useState("home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
-  const isMobile = useMediaQuery("(max-width: 760px)");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,10 +24,13 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Navbar isTopOfPage={isTopOfPage} Page={Page} setPage={setPage} />
-      <Home setPage={setPage} />
-      <About setPage={setPage} />
+        <Home setPage={setPage} />
+        <About setPage={setPage} />
+        <Projects />
+        <Contact />
+        <Footer />
     </div>
   );
 }
