@@ -8,10 +8,10 @@
 :root {
   --text-light-color: #ffffff;
   --text-dark-color: #000000;
-  --background-color: #ffffff;
-  --primary-color: #f2f4f8;
-  --secondary-color: #0f62fe;
-  --accent-color: #d0e2ff;
+  --background-color: #f7f5eb;
+  --primary-color: #f9bca4;
+  --secondary-color: #709efb;
+  --accent-color: #e3ebcf;
   --highlight-color: #f2d363;
 }
 

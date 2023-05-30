@@ -1,5 +1,6 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import SocialMediaIcons from "../components/SMIcons";
+import {RiArrowRightUpLine} from "react-icons/ri";
 
 const Home = ({ setPage }) => {
   return (
@@ -15,7 +16,6 @@ const Home = ({ setPage }) => {
       min-[500px]:px-10
       sm:px-0"
     >
-
       
       {/* IMAGE SECTION */}
       <div
@@ -29,7 +29,9 @@ const Home = ({ setPage }) => {
             className="min-[800px]:max-w-[500px] md:max-w-[300px] unselect home__img z-10 h-auto"
             src="assets/profileImg.jpg"
           />
-
+          <div className="absolute z-30 min-[800px]:pt-[200px] min-[800px]:ms-[-80px] sm:pt-[130px] sm:ms-[-60px] min-[800px]:text-[250px] sm:text-[200px] text-black">
+            <RiArrowRightUpLine/>
+          </div>
           
       </div>
       {/* MAIN TEXT */}

@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { BiWorld } from "react-icons/bi";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import SkillsTicker from "../components/SkillsTicker";
 import Resume from "../components/Resume";
 
@@ -106,7 +108,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="flex justify-center align-center content-center sm:mx-5 lg:ms-10 unselect group">
+          <div className="flex justify-center align-center content-center sm:mx-5 unselect group">
             <div
               id="circle"
               className="text-[25px] z-20 font-mono my-10"

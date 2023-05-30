@@ -38,8 +38,8 @@ function Projects() {
   return (
     <section id="projects" className="">
       {/* HEADINGS */}
-      <div className="justify-center flex items-center h-[200px] bg-primary-color">
-          <span className="text-4xl font-Syne font-extrabold text-center highlight-yellow-primary">
+      <div className="justify-center flex items-center h-[200px] bg-accent-color">
+          <span className="text-4xl font-Syne font-extrabold text-center highlight-yellow-accent">
             Featured Projects
           </span>        
       </div>
