@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import { BiWorld } from "react-icons/bi";
-import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import SkillsTicker from "../components/SkillsTicker";
 import Resume from "../components/Resume";
 
