@@ -1,6 +1,5 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import SocialMediaIcons from "../components/SMIcons";
-import {RiArrowLeftUpLine} from "react-icons/ri";
 
 const Home = ({ setPage }) => {
   return (
