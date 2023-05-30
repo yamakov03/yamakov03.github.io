@@ -89,7 +89,7 @@ function Contact() {
           </div>
         </div>
       </div>
-      <div className="flex justify-end z-30 md:text-[250px] sm:text-[200px]">
+      <div className="flex justify-end z-30 lg:text-[400px] lg:m-[-50px] sm:m-[0px] sm:text-[200px]">
         <RiArrowRightDownLine />
       </div>
     </section>
