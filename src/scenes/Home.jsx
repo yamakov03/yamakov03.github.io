@@ -16,6 +16,7 @@ const Home = ({ setPage }) => {
       min-[500px]:px-10
       sm:px-0"
     >
+      
       {/* IMAGE SECTION */}
       <div
         className="unselect mt-16 md:basis-1/5 sm:basis-3/5
@@ -36,6 +37,7 @@ const Home = ({ setPage }) => {
       {/* MAIN TEXT */}
       <div
         className="mt-24 items-center 
+        z-10
         pb-5 
         justify-end
       md:basis-[100px]
@@ -49,7 +51,7 @@ const Home = ({ setPage }) => {
         {/* HEADINGS */}
         <p className="min-[800px]:text-9xl sm:text-6xl font-Syne">Daniel Yamakov</p>
         <p className="mt-2 mb-10 min-[800px]:text-4xl sm:text-xl">
-          What's up! I'm studying software engineering at UT Austin
+          What's up! I'm studying software engineering at UT Austin.
         </p>
         <div className="md:inline-flex items-center">
           <AnchorLink

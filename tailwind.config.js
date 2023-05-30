@@ -24,6 +24,7 @@ module.exports = {
         "primary-color": "var(--primary-color)",
         "secondary-color": "var(--secondary-color)",
         "accent-color": "var(--accent-color)",
+        "highlight-color": "var(--highlight-color)",
       },
       variables: {
         "border-size": "var(--border-size)",

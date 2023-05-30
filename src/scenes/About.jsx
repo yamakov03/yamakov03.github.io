@@ -7,7 +7,7 @@ import Resume from "../components/Resume";
 const Job = ({ title, job, time, desc, skills }) => {
   return (
     <div>
-      <p className="text-2xl mt-[30px] w-full">
+      <p className="text-2xl mt-6 w-full">
         {title} | {job}
       </p>
       <p className="w-full">{time}</p>
@@ -66,66 +66,16 @@ const About = () => {
         className="flex w-full flex-wrap border-b-[1px] 
       border-black"
       >
-        <div
-          className="w-full lg:w-2/5 
-      min-[1024px]:order-1 sm:order-2 
-      lg:bg-secondary-color
-      sm:bg-primary-color flex flex-wrap"
-        >
-          <div className="flex justify-center items-center basis-full">
-            <div
-              className="group 
-            relative 
-            block 
-            min-[1024px]:w-[70%]
-            sm:w-[70%]
-            md:h-[350px]
-            sm:h-[375px]
-            sm:mt-10
-            min-[1024px]:mt-[100px]    
-            "
-            >
-              <span className="absolute inset-0 bg-black rounded-xl"></span>
-              <div
-                className=" flex h-full 
-            transform items-end 
-            bg-accent-color
-            
-            rounded-xl  transition hover:shadow-none
-            group-hover:-translate-x-2 group-hover:-translate-y-2 
-            border-2 border-black"
-              >
-                <div className="transition-opacity group-hover:absolute group-hover:opacity-0 p-8">
-                  <p className="text-5xl">
-                    <BiWorld />
-                  </p>
-
-                  <h2 className="mt-4 text-4xl font-medium ">What drives me</h2>
-                </div>
-
-                <div className="absolute opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 p-8 ">
-                  <h3 className="mt-4 text-2xl font-medium">Make an Impact</h3>
-
-                  <p className="mt-4 text-lg ">
-                    This world is filled with complex problems. I am motivated
-                    to be a <span className="font-bold"> force for good</span>.
-                    I'm excited to keep learning and create positive change, day
-                    by day.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex basis-full items-end justify-end z-30 text-[300px] lg:text-primary-color sm:text-secondary-color ">
-            <MdKeyboardDoubleArrowRight />
-          </div>
-        </div>
+        <img
+          className="flex w-2/5 max-[1023px]:hidden lg:visible object-cover h-[920px] border-s-[1px] border-black unselect"
+          alt="working"
+          src="assets/about.jpg"
+        />
 
         {/* MAIN TEXT */}
         <div
           className="w-full lg:w-3/5 sm:order-1 min-[1024px]:order-2 lg:border-l-[1px] md:border-l-[0px] border-black 
-      lg:bg-primary-color
-      sm:bg-primary-color max-[1401px]:pt-[100px] justify-center items-center flex flex-wrap px-5"
+      bg-primary-color max-[1023px]:py-[70px] justify-center items-center flex flex-wrap px-5"
         >
           <h3 className="justify-center flex w-full text-4xl font-Syne font-extrabold text-black mb-10 lg:hidden sm:visible">
             About me.
@@ -138,26 +88,27 @@ const About = () => {
         sm:text-center
         w-full
         px-4
+        mb-5
         "
           >
             {/* HEADINGS */}
-            <h3 className="justify-left flex w-full text-4xl font-Syne font-extrabold mb-10 text-black lg:visible max-[1024px]:hidden">
+            <h3 className="justify-left flex w-full text-4xl font-Syne font-extrabold mb-10 text-black lg:visible max-[1023px]:hidden mt-10">
               About me.
             </h3>
-            <p className="md:text-5xl sm:text-4xl font-Syne mb-10">
+            <span className="md:text-5xl sm:text-4xl font-Syne" >
               A SWE longhorn from Austin, Texas 🤘
-            </p>
-            <p className="md:text-2xl sm:text-xl">
-              I'm a electrical and computer engineering junior at UT Austin. I'm
-              also working as a SWE Intern at Hewlett Packard Enterprise.{" "}
+            </span>
+            <p className="md:text-2xl sm:text-xl pt-4">
+              Hey! I'm a electrical and computer engineering junior at UT Austin, working on an integrated BS/MS program. Right now, I'm
+              working as a SWE Intern at HPE.{" "}
               <br></br>
               <br></br>I like to take complex problems and simplify them. As
               Leonardo Da Vinci once said,{" "}
-              <strong>simplicity is the ultimate sophistication.</strong>
+              <span className="highlight-yellow-primary">simplicity is the ultimate sophistication.</span>
             </p>
           </div>
 
-          <div className="flex justify-center align-center content-center lg:mx-10 sm:mx-5 unselect group">
+          <div className="flex justify-center align-center content-center sm:mx-5 unselect group">
             <div
               id="circle"
               className="text-[25px] z-20 font-mono my-10"
@@ -170,62 +121,56 @@ const About = () => {
       </div>
 
       <div className="flex items-center max-[1024px]:w-1/2 sm:w-full justify-center">
-        <div className="flex flex-col min-[1024px]:py-[0px] sm:py-[70px] min-[1024px]:px-[5%] sm:px-[15%] ">
+        <div className="flex flex-col min-[1024px]:py-[0px] sm:py-[70px] min-[1024px]:px-[5%] sm:px-[15%] my-4">
           <div className="">
-            <h3 className="text-4xl text-left font-Syne font-extrabold mb-[40px] items-left">
+            <span className="text-4xl text-left font-Syne font-extrabold mb-[40px] items-left highlight-yellow-bg">
               Education
-            </h3>
-            <p className="w-full">
+            </span>
+            <p className="w-full mt-4 mb-10">
               <p className="text-2xl w-full">The University of Texas at Austin</p>
-              BS, MS Electrical and Computer Engineering<br></br>
-              May 2021 - Present (Expected 2025)<br></br>
-              <br></br>
-              <strong>Concentration: </strong>Software Engineering and Systems
-              <br></br>
-              <strong>Cumulative GPA: </strong>3.65/4.00
+              <p className="w-full">BS, MS Electrical and Computer Engineering</p>
+              <p className="w-full mb-4">May 2021 - Present (Expected 2025)</p>
+              <p className="w-full"><strong>Concentration: </strong>Software Engineering and Systems (SES)</p>
+              <p className="w-full"><strong>Cumulative GPA: </strong>3.65/4.00</p>
             </p>
           </div>
           <div className="mb-[40px]">
-            <h3 className="text-4xl mt-[50px] text-left font-Syne font-extrabold mb-5 items-left">
+            <span className="text-4xl mt-[50px] text-left font-Syne font-extrabold items-left highlight-yellow-bg">
               Work
-            </h3>
+            </span>
             <Job
               title="Intern Software Engineer"
               job="Hewlett Packard Enterprise"
               time="May 2023 - Present"
-              desc="
-"
+              desc="In the works"
               skills="something"
             />
             <Job
-              title="Intern AI/ML Intern"
+              title="Intern AI/ML Engineer"
               job="State Street Corporation"
-              time="Jan 2023 - Present"
-              desc="Building machine learning models to detect anomalies in sensitive financial information using Sklearn.
-"
-              skills="React.js, REST APIs, server-side integration, ML anomaly detection, UI/UX testing"
+              time="Jan 2023 - May 2023"
+              desc="Deployed a new anomaly detection service to production that leverages ML to detect fraudulent transactions."
+              skills="React, Node.js, client-server architecture, REST APIs, UI/UX Testing"
             />
             <Job
               title="Intern Commercial Analyst"
               job="Talen Energy"
               time="June 2022 - Aug 2022"
-              desc="Built and deployed a Bitcoin miner automation tool with live queries, improving fleet efficiency by 15%."
-              skills="C# .NET, SQL, Azure SQL Server, Bitcoin P2P protocol, algorithmic trading"
+              desc="Built and deployed a Bitcoin miner automation tool using live market data, improving profitability by 15%."
+              skills="C# .NET, SQL, Azure SQL Server, REST APIs, Bitcoin P2P protocol"
             />
             <Job
               title="Intern Software Engineer"
               job="Datos Technologies"
               time="Oct 2019 - Jan 2020"
-              desc="Maintained popular point-of-sale Android application that allows users to apply smart discounts to inventory"
+              desc="Maintained a popular point-of-sale Android application that provides data-driven pricing on client inventory."
               skills="Java, Git, JUnit testing, Gradle, Android Studio"
             />
           </div>
           <Resume />
         </div>
-
-        {/* MAP */}
         <img
-          className="flex w-1/2 max-[1023px]:hidden lg:visible object-cover h-[1360px] border-s-[1px] border-black unselect"
+          className="flex w-1/2 max-[1023px]:hidden lg:visible object-cover h-[1400px] border-s-[1px] border-black unselect"
           alt="working"
           src="assets/work.jpg"
         />

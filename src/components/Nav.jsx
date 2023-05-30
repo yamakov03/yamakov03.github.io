@@ -7,7 +7,7 @@ const Link = ({ page, Page, setPage }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
-    offset='50'
+    offset='70'
       className="hover:text-secondary-color font-Darker_Grotesque min-[760px]:text-2xl sm:text-6xl"
       href={`#${lowerCasePage}`}
       onClick={() => setPage(lowerCasePage)}

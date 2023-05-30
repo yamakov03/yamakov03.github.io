@@ -39,9 +39,9 @@ function Projects() {
     <section id="projects" className="">
       {/* HEADINGS */}
       <div className="justify-center flex items-center h-[200px] bg-accent-color">
-        <h3 className="text-4xl font-Syne font-extrabold text-center">
-          Featured Projects
-        </h3>
+          <span className="text-4xl font-Syne font-extrabold text-center highlight-yellow-accent">
+            Featured Projects
+          </span>        
       </div>
 
       {/* PROJECTS */}
