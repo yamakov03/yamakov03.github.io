@@ -7,7 +7,7 @@ const Link = ({ page, Page, setPage }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
-    offset='70'
+    offset='55'
       className="hover:text-secondary-color font-Darker_Grotesque min-[760px]:text-2xl sm:text-6xl"
       href={`#${lowerCasePage}`}
       onClick={() => setPage(lowerCasePage)}
@@ -31,7 +31,7 @@ const Navbar = ({ isTopOfPage, Page, setPage }) => {
     <nav
       className={`${
         isTopOfPage ? "" : "bg-white border-black border-b-[1px]"
-      } z-40 w-full fixed top-0 py-3  `}
+      } z-40 w-full fixed top-0 py-1  `}
     >
       <div className="flex items-center justify-between mx-auto w-5/6 ">
         <AnchorLink
