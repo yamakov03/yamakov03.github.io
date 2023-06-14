@@ -53,7 +53,7 @@ const Home = ({ setPage }) => {
         </p>
         <div className="md:inline-flex items-center">
           <AnchorLink
-            className="text-xl items-center justify-center
+            className="text-xl inline-flex items-center justify-center
             rounded-xl border-2 border-black text-black bg-accent-color px-5 py-3
             font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none 
             focus:outline-none focus:shadow-none focus:ring-0 w-[170px]"
