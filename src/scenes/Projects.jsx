@@ -74,11 +74,11 @@ function Projects() {
       <section id="projects" className="">
         {/* HEADINGS */}
         <div className="justify-center flex items-center h-[120px] bg-primary-color text-black">
-          <span className="text-4xl lg:text-6xl font-Syne font-semibold text-center me-5">
+          <span className="text-4xl lg:text-6xl font-Syne font-semibold text-center md:me-5 me-1">
             Featured Projects
             {/* <span className="blinker relative top-[-5px]">|</span> */}
           </span>
-          <a href="https://github.com/yamakov03" role="button">
+          <a href="https://github.com/yamakov03" role="button" className="relative left-[-50px] min-[406px]:left-[0px]">
             <AiFillGithub className="text-5xl text__shadow" />
           </a>
         </div>
