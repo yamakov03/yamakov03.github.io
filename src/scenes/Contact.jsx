@@ -8,10 +8,10 @@ function Contact() {
       <div className="flex">
         <div className="flex flex-col lg:w-1/2 sm:w-full lg:items-end sm:items-center lg:me-20 mx-10">
           <div>
-            <span className="text-4xl text-left font-Syne font-extrabold md:mb-10 sm:mb-10 items-left highlight-yellow-bg">
+            <span className="text-4xl text-left font-Syne font-extrabold items-left highlight-yellow-bg">
               Just say hi.
             </span>
-            <p className="w-3/5 mt-4">
+            <p className="w-3/5 mt-8 mb-2">
               I'm always open to talk about jobs, projects, or research.
             </p>
             <div class="pt-4 mx-auto max-w-screen-md">

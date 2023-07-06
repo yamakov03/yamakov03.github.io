@@ -67,9 +67,9 @@ const Navbar = ({ isTopOfPage, Page, setPage }) => {
 
         {/* MOBILE MENU POPUP */}
         {isMobile && isToggled && (
-          <div className="fixed right-0 bottom-0 h-full w-[300px] bg-white border-l-[1px] border-black">
+          <div className="fixed right-0 bottom-0 h-full w-[250px] bg-white border-l-[1px] border-black" >
             {/* MENU ITEMS */}
-            <div className="ml-[17%] mt-[20vh] font-Darker_Grotesque">
+            <div className="ml-[12%] mt-[20vh] font-Darker_Grotesque">
               <div className="mb-4">
                 <Link page="Home" Page={Page} setPage={setPage} />
               </div>

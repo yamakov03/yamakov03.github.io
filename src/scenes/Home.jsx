@@ -11,12 +11,10 @@ const Home = ({ setPage }) => {
       border-b-[1px] 
       border-black
       py-20
-      min-[1399px]:h-[100vh] 
+      home-xl:h-[100vh] 
       min-[500px]:px-10
       sm:px-0"
     >
-
-      
       {/* IMAGE SECTION */}
       <div
         className="unselect mt-16 md:basis-1/5 sm:basis-3/5

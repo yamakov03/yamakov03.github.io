@@ -121,7 +121,7 @@ const About = () => {
       <div className="flex items-center max-[1024px]:w-1/2 sm:w-full justify-center">
         <div className="flex flex-col min-[1024px]:py-[0px] sm:py-[70px] min-[1024px]:px-[5%] sm:px-[15%] my-4">
           <div className="">
-            <span className="text-4xl text-left font-Syne font-extrabold mb-[40px] items-left highlight-yellow-bg">
+            <span className="text-4xl text-left font-Syne font-extrabold mb-6 items-left highlight-yellow-bg">
               Education
             </span>
             <p className="w-full mt-4 mb-10">

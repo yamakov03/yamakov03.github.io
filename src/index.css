@@ -25,6 +25,7 @@
   }
 }
 
+
 .home__img {
   background-size: cover;
   background-position: center;
@@ -206,4 +207,20 @@ span.highlight-yellow-bg {
   text-shadow: 12px -5px 10px rgba(253, 255, 50, 0.7),
     21px -5.1px 15.3px var(--background-color),
     -18.1px -27.3px 30px var(--background-color);
+}
+
+.blinker { 
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1,0,0,1);
+  animation-duration: 1s;
+  display: inline;
+  width: 8px;
+  height: 100px;
+  margin-left: 0px;
+  box-shadow: 0 0 10px rgba(white,0);
+}
+
+@keyframes blinker { 
+  from { opacity: 1.0; } to { opacity: 0.0; }
 }
