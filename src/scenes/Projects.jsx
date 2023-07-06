@@ -29,7 +29,7 @@ const Project = ({ title, altTitle, desc, link, order }) => {
       </div>
       {hover || window.innerWidth < 1024 ?
         <a href={link !== "" ? link : ""} className={`cursor-pointer bg-black ${order === "order-1" ? "lg:border-r-[1px]" : null} border-r-[0px] border-black border-b-[1px]
-  lg:w-1/2 sm:w-full flex overflow-hidden h-auto group-hover:opacity-100 opacity-80 transition-opacity duration-500`}>
+  lg:w-1/2 sm:w-full flex overflow-hidden h-auto group-hover:opacity-100 opacity-100 lg:opacity-80 transition-opacity duration-500`}>
           <img
             className="
     unselect object-cover w-full"
