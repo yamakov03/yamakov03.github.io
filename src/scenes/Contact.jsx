@@ -3,7 +3,7 @@ import { RiArrowRightDownLine } from "react-icons/ri";
 
 function Contact() {
   return (
-    <section id="contact" className="pt-[150px]">
+    <section id="contact" className="pt-[150px] border-t-[1px] border-black">
       {/* HEADINGS */}
       <div className="flex">
         <div className="flex flex-col lg:w-1/2 sm:w-full lg:items-end sm:items-center lg:me-20 mx-10">

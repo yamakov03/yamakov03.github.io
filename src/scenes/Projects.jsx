@@ -1,10 +1,21 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import handleViewport, { useInViewport } from 'react-in-viewport';
+import SkillsTicker from "../components/SkillsTicker";
+import { AiFillGithub } from "react-icons/ai";
 
 const Project = ({ title, altTitle, desc, link, order }) => {
   const projectTitle = altTitle.split(" ").join("-").toLowerCase();
   const [hover, setHover] = React.useState(false);
+  useEffect(() => {
+    window.addEventListener('resize', function (event) {
+      if (window.innerWidth < 1024) {
+        setHover(true);
+      } else {
+        setHover(false);
+      }
+    }, true);
+  }, [])
   return (
     <div className="group flex flex-wrap justify-center" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
       <div
@@ -27,9 +38,9 @@ const Project = ({ title, altTitle, desc, link, order }) => {
           <HiArrowNarrowRight />
         </a>
       </div>
-      {hover || window.innerWidth < 1024 ?
+      {hover ?
         <a href={link !== "" ? link : ""} className={`cursor-pointer bg-black ${order === "order-1" ? "lg:border-r-[1px]" : null} border-r-[0px] border-black border-b-[1px]
-  lg:w-1/2 sm:w-full flex overflow-hidden h-auto group-hover:opacity-100 opacity-100 lg:opacity-80 transition-opacity duration-500`}>
+  lg:w-1/2 sm:w-full flex overflow-hidden h-auto group-hover:opacity-100 lg:opacity-80 opacity-100 transition-opacity duration-500`}>
           <img
             className="
     unselect object-cover w-full"
@@ -38,7 +49,7 @@ const Project = ({ title, altTitle, desc, link, order }) => {
           />
         </a>
         :
-        <a href={link !== "" ? link : ""} className={`  cursor-pointer  ${order === "order-1" ? "lg:border-r-[1px]" : null} border-r-[0px] group-hover:opacity-100 opacity-80 transition-opacity duration-500 bg-black border-black border-b-[1px]
+        <a href={link !== "" ? link : ""} className={`  cursor-pointer  ${order === "order-1" ? "lg:border-r-[1px]" : null} border-r-[0px] group-hover:opacity-100 lg:opacity-80 opacity-100 transition-opacity duration-500 bg-black border-black border-b-[1px]
   lg:w-1/2 sm:w-full flex overflow-hidden h-auto`}>
           <img
             className="
@@ -59,50 +70,54 @@ const Project = ({ title, altTitle, desc, link, order }) => {
 
 function Projects() {
   return (
-    <section id="projects" className="">
-      {/* HEADINGS */}
-      <div className="justify-center flex items-center h-[200px] bg-primary-color">
-        <span className="text-5xl xl:text-6xl font-Syne font-semibold text-center">
-          Featured Projects
-          {/* <span className="blinker relative top-[-5px]">|</span> */}
-        </span>
-      </div>
+    <>
+      <section id="projects" className="">
+        {/* HEADINGS */}
+        <div className="justify-center flex items-center h-[120px] bg-primary-color text-black">
+          <span className="text-4xl lg:text-6xl font-Syne font-semibold text-center me-5">
+            Featured Projects
+            {/* <span className="blinker relative top-[-5px]">|</span> */}
+          </span>
+          <a href="https://github.com/yamakov03" role="button">
+            <AiFillGithub className="text-5xl text__shadow" />
+          </a>
+        </div>
 
-      {/* PROJECTS */}
-      <div className="justify-center border-black border-t-[1px] bg-white">
+        {/* PROJECTS */}
+        <div className="justify-center border-black border-t-[1px] bg-white">
 
-        <Project
-          title="Spotify Next"
-          altTitle="spotifynext"
-          desc="A Refreshed Spotify Client built with Next.js 13. Users can login with their Spotify account and access their playlists, saved songs, and more."
-          link="https://spotifynxt.vercel.app/"
-          order="order-1"
-        >
-        </Project>
-        <Project
-          title="JustTheNews: Real-Time News Parser"
-          altTitle="news"
-          desc="A real-time news parser built with Python and Flask. Users can search for news articles and view the latest headlines."
-          link="https://justthenews-flask-app.onrender.com/"
-          order=""
-        />
-        <Project
-          title="LiteNote: Lightweight Notes Web Application"
-          altTitle="LiteNotes"
-          desc="A lightweight notes web app built with Python and Flask. Users can create, edit, and delete notes."
-          link="https://litenotes-flask-web-app.onrender.com/"
-          order="order-1"
-        />
-        <Project
-          title="Manhattan NYC Folio"
-          altTitle="nyc"
-          desc="My camera and Manhattan's touristy spots, bustling streets, and incredible architecture. Built with Python and Flask."
-          link="https://nyc-gallery-app.onrender.com/"
-          order=""
-        />
+          <Project
+            title="Spotify Next"
+            altTitle="spotifynext"
+            desc="A Refreshed Spotify Client built with Next.js 13. Users can login with their Spotify account and access their playlists, saved songs, and more."
+            link="https://spotifynxt.vercel.app/"
+            order="order-1"
+          >
+          </Project>
+          <Project
+            title="JustTheNews: Real-Time News Parser"
+            altTitle="news"
+            desc="A real-time news parser built with Python and Flask. Users can search for news articles and view the latest headlines."
+            link="https://justthenews-flask-app.onrender.com/"
+            order=""
+          />
+          <Project
+            title="LiteNote: Lightweight Notes Web Application"
+            altTitle="LiteNotes"
+            desc="A lightweight notes web app built with Python and Flask. Users can create, edit, and delete notes."
+            link="https://litenotes-flask-web-app.onrender.com/"
+            order="order-1"
+          />
+          <Project
+            title="Manhattan NYC Folio"
+            altTitle="nyc"
+            desc="My camera and Manhattan's touristy spots, bustling streets, and incredible architecture. Built with Python and Flask."
+            link="https://nyc-gallery-app.onrender.com/"
+            order=""
+          />
 
 
-        {/* <Project
+          {/* <Project
           title="eHills Dynamic Auction Platform"
           desc="A client-server Java application that allows multiple users to bid, purchase and interact with items stored on a MongoDB database. The project contains three main components: the server backend, the client GUI (JavaFX), and the client backend."
           link=""
@@ -112,8 +127,10 @@ function Projects() {
           link=""
         /> */}
 
-      </div>
-    </section>
+        </div>
+      </section>
+      <SkillsTicker />
+    </>
   );
 }
 
