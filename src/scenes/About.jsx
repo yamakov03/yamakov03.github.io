@@ -67,11 +67,11 @@ const About = () => {
 
         </div>
       </div>
-      <div className="flex items-center max-[1024px]:w-1/2 sm:w-full justify-center border-black border-t-[1px]">
-        <div className="flex flex-col min-[1024px]:py-[0px] sm:py-[70px] min-[1024px]:px-[5%] sm:px-[15%] my-4">
+      <div className="flex items-center max-[1024px]:w-1/2 sm:w-full justify-center border-black border-t-[1px] ">
+        <div className="flex flex-col me-[2%] ms-[2%] px-8 py-10">
           <div className="">
-            <div className="flex items-center align-middle mb-6">
-              <span className="text-4xl text-left font-Syne font-extrabold items-left highlight-yellow-bg me-6">
+            <div className="flex items-center align-middle">
+              <span className="text-4xl text-left font-Syne font-extrabold items-left highlight-yellow-bg">
                 Education
               </span>
             </div>
@@ -96,7 +96,7 @@ const About = () => {
           <div className="mb-[30px]">
             <div className="flex items-center align-middle mb-6">
 
-              <span className="text-4xl text-left font-Syne font-extrabold items-left highlight-yellow-bg me-6">
+              <span className="text-4xl text-left font-Syne font-extrabold items-left highlight-yellow-bg">
                 Work
 
               </span>
@@ -106,35 +106,35 @@ const About = () => {
               title="Intern Software Engineer"
               job="Hewlett Packard Enterprise"
               time="May 2023 - Present"
-              desc="In the works"
+              desc="Developing an SDK and CLI for company-wide vulnerability tracker platform to improve endpoint access"
               skills="something"
             />
             <Job
               title="Intern AI/ML Engineer"
               job="State Street Corporation"
               time="Jan 2023 - May 2023"
-              desc="Deployed a new anomaly detection service to production that leverages ML to detect fraudulent transactions."
-              skills="React, Node.js, client-server architecture, REST APIs, UI/UX Testing"
+              desc="Architected and implemented new services to detect anomalies in financial information through ensemble-based learning"
+              skills="React, API development, server-side integration, Docker"
             />
             <Job
               title="Intern Commercial Analyst"
               job="Talen Energy"
               time="June 2022 - Aug 2022"
-              desc="Built and deployed a Bitcoin miner automation tool using live market data, improving profitability by 15%."
-              skills="C# .NET, SQL, Azure SQL Server, REST APIs, Bitcoin P2P protocol"
+              desc="Proposed and implemented a new bitcoin miner automation tool that lowered energy usage by more than15%"
+              skills="C# .NET, Python, Azure SQL Server,predictive modeling"
             />
             <Job
               title="Intern Software Engineer"
               job="Datos Technologies"
               time="Oct 2019 - Jan 2020"
-              desc="Maintained a popular point-of-sale Android application that provides data-driven pricing on client inventory."
-              skills="Java, Git, JUnit testing, Gradle, Android Studio"
+              desc="Maintained a popular point-of-sale Android application that allows users to apply smart discounts to inventory"
+              skills="Java, Git, unit testing, Gradle, Android Studio"
             />
           </div>
           <Resume />
         </div>
         <img
-          className="flex w-1/2 max-[1023px]:hidden lg:visible object-cover min-[1590px]:h-[1200px] h-[1400px] border-s-[1px] border-black unselect"
+          className="flex w-1/2 max-[1023px]:hidden lg:visible object-cover min-[1300px]:h-[1200px] h-[1500px] border-s-[1px] border-black unselect"
           alt="working"
           src="assets/work.jpg"
         />
