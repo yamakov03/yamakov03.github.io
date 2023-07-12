@@ -120,8 +120,8 @@ const About = () => {
               title="Intern Commercial Analyst"
               job="Talen Energy"
               time="June 2022 - Aug 2022"
-              desc="Proposed and implemented a new bitcoin miner automation tool that lowered energy usage by more than15%"
-              skills="C# .NET, Python, Azure SQL Server,predictive modeling"
+              desc="Proposed and implemented a new bitcoin miner automation tool that lowered energy usage by more than 15%"
+              skills="C# .NET, Python, Azure SQL Server, predictive modeling"
             />
             <Job
               title="Intern Software Engineer"
