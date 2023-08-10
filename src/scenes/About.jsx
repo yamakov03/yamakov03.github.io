@@ -51,10 +51,11 @@ const About = () => {
               A SWE longhorn from Austin, Texas 🤘
             </span>
             <p className="md:text-2xl sm:text-xl pt-4">
-              Hey! I'm a electrical and computer engineering junior at UT
-              Austin, working on an integrated BS/MS program. Right now, I'm
-              working as a SWE Intern at HPE. <br></br>
-              <br></br>I like to take complex problems and simplify them. As
+              I'm a electrical and computer engineering junior at UT
+              Austin, planning to graduate with my BS in 2024. Right now, I'm
+              working as a software engineer intern at HPE on product security. I'm interested
+              in opportunities to learn and grow in my career! <br></br>
+              <br></br>I like to approach complex problems by simplifying them. As
               Leonardo Da Vinci once said,{" "}
               <span className="highlight-yellow-primary">
                 simplicity is the ultimate sophistication.
@@ -91,7 +92,7 @@ const About = () => {
               </p>
             </p>
           </div>
-          <div className="mb-[10px]">
+          <div className="mb-[20px]">
             <div className="flex items-center align-middle mb-6">
 
               <span className="text-4xl text-left font-Syne font-extrabold items-left highlight-yellow-bg">
@@ -132,7 +133,7 @@ const About = () => {
           <Resume />
         </div>
         <img
-          className="flex w-1/2 max-[1023px]:hidden lg:visible object-cover min-[1300px]:h-[1200px] h-[1500px] border-s-[1px] border-black unselect"
+          className="flex w-1/2 max-[1023px]:hidden lg:visible object-cover min-[1600px]:h-[1200px] h-[1500px] border-s-[1px] border-black unselect"
           alt="working"
           src="assets/work.jpg"
         />

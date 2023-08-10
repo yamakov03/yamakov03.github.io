@@ -48,7 +48,7 @@ const Home = ({ setPage }) => {
         {/* HEADINGS */}
         <p className="min-[800px]:text-9xl sm:text-6xl font-Syne">Daniel Yamakov</p>
         <p className="mt-2 mb-10 min-[800px]:text-4xl sm:text-xl">
-          What's up! I'm studying software engineering at UT Austin.
+          Hey! I'm studying software engineering at UT Austin.
         </p>
         <div className="inline-flex items-center justify-center flex-wrap">
           <AnchorLink
