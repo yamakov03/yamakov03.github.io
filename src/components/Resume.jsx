@@ -6,7 +6,7 @@ function Resume() {
     className="text-xl flex items-center justify-center
     rounded-xl border-2 border-black text-black bg-accent-color px-4 py-3
     font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none 
-    focus:outline-none focus:shadow-none focus:ring-0 w-[200px] relative"
+    focus:outline-none focus:shadow-none focus:ring-0 w-[200px] relative mt-5 min-[800px]:mt-0"
     href="../assets/DanielYamakovResume.pdf"
   >
     My Resume 🖇️

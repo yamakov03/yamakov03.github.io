@@ -4,7 +4,7 @@ import handleViewport, { useInViewport } from 'react-in-viewport';
 import SkillsTicker from "../components/SkillsTicker";
 import { AiFillGithub } from "react-icons/ai";
 
-const Project = ({ title, altTitle, desc, link, order }) => {
+const Project = ({ title, altTitle, desc, link, order, note="" }) => {
   const projectTitle = altTitle.split(" ").join("-").toLowerCase();
   const [hover, setHover] = React.useState(false);
   useEffect(() => {
@@ -24,36 +24,38 @@ const Project = ({ title, altTitle, desc, link, order }) => {
         <p className="text-2xl w-full font-syne">{title}</p>
         <p className="mt-5 text-md lg:text-xl  xl:pe-[30%] pe-0">{desc}</p>
         {/* <a href={link}
-            className={` ${link !== "" ? "visible" : "hidden"} mt-5 text-xl inline-flex items-center justify-center
+          className={` ${link !== "" ? "visible" : "hidden"} group mt-5 text-xl inline-flex items-center justify-center
             rounded-xl border-2 border-black text-black bg-accent-color px-5 py-3
             font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none 
             focus:outline-none focus:shadow-none focus:ring-0 w-[200px]`}
-            href="#contact"
-          >
-            <p className={"me-[5px] font-semibold"}>Check it out </p>
-            <HiArrowNarrowRight />
-          </a> */}
-        <a href={link} className={`${link !== "" ? "visible" : "hidden"} flex align-center items-center w-[150px] mt-4 text-xl hover:opacity-50 transition-opacity duration-200`}>
+        >
+          <p className={"me-[5px] font-semibold"}>Check it out </p>
+          <HiArrowNarrowRight />
+          
+        </a> */}
+        <a href={link} className={`${link !== "" ? "visible" : "hidden"} pb-5  group/btn flex align-center items-center w-[150px] mt-4 text-xl hover:opacity-50 transition-opacity duration-200`}>
           <p className={"me-[5px] font-semibold my-2"}>Check it out </p>
           <HiArrowNarrowRight />
+          <span
+            class="pointer-events-none border-2 rounded-lg bg-black text-white flex-wrap absolute mt-[80px] lg:w-[375px] opacity-0 transition-opacity group-hover/btn:opacity-100"
+          >
+           <p className="p-1 text-sm">{note}</p>
+          </span>
         </a>
       </div>
       {hover ?
         <a href={link !== "" ? link : ""} className={`cursor-pointer bg-black ${order === "order-1" ? "lg:border-r-[1px]" : null} border-r-[0px] border-black border-b-[1px]
-  lg:w-1/2 sm:w-full flex overflow-hidden h-auto group-hover:opacity-100 lg:opacity-80 opacity-100 transition-opacity duration-500`}>
+          lg:w-1/2 sm:w-full flex overflow-hidden h-auto group-hover:opacity-100 lg:opacity-80 opacity-100 transition-opacity duration-500`}>
           <img
-            className="
-    unselect object-cover w-full"
+            className="unselect object-cover w-full"
             src={`/assets/projects_gif/${projectTitle}.gif`}
             alt={projectTitle}
           />
         </a>
         :
-        <a href={link !== "" ? link : ""} className={`  cursor-pointer  ${order === "order-1" ? "lg:border-r-[1px]" : null} border-r-[0px] group-hover:opacity-100 lg:opacity-80 opacity-100 transition-opacity duration-500 bg-black border-black border-b-[1px]
-  lg:w-1/2 sm:w-full flex overflow-hidden h-auto`}>
+        <a href={link !== "" ? link : ""} className={`  cursor-pointer  ${order === "order-1" ? "lg:border-r-[1px]" : null} border-r-[0px] group-hover:opacity-100 lg:opacity-80 opacity-100 transition-opacity duration-500 bg-black border-black border-b-[1px] lg:w-1/2 sm:w-full flex overflow-hidden h-auto`}>
           <img
-            className="
-    unselect object-cover w-full"
+            className="unselect object-cover w-full"
             src={`/assets/projects_gif/${projectTitle}.png`}
             alt={projectTitle}
           />
@@ -92,6 +94,7 @@ function Projects() {
             desc="A Refreshed Spotify Client built with Next.js 13. Users can login with their Spotify account and access their playlists, saved songs, and more."
             link="https://spotifynxt.vercel.app/"
             order="order-1"
+            note="Spotify API requires users to be added manually in dev mode. Please contact me for access!"
           >
           </Project>
           <Project
@@ -100,6 +103,7 @@ function Projects() {
             desc="A real-time news parser built with Python and Flask. Users can search for news articles and view the latest headlines."
             link="https://justthenews-flask-app.onrender.com/"
             order=""
+            note="Heads up, the app might take a few seconds to load!"
           />
           <Project
             title="LiteNote: Lightweight Notes Web Application"
@@ -107,6 +111,7 @@ function Projects() {
             desc="A lightweight notes web app built with Python and Flask. Users can create, edit, and delete notes."
             link="https://litenotes-flask-web-app.onrender.com/"
             order="order-1"
+            note="Heads up, the app might take a few seconds to load!"
           />
           <Project
             title="Manhattan NYC Folio"
@@ -114,6 +119,7 @@ function Projects() {
             desc="My camera and Manhattan's touristy spots, bustling streets, and incredible architecture. Built with Python and Flask."
             link="https://nyc-gallery-app.onrender.com/"
             order=""
+            note="Heads up, the app might take a few seconds to load!"
           />
 
 

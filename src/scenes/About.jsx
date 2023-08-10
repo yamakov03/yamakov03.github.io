@@ -6,10 +6,10 @@ const Job = ({ title, job, time, desc, skills }) => {
   return (
     <div>
       <p className="text-2xl mt-6 w-full">
-        {title} | {job}
+        {title} @ {job}
       </p>
       <p className="w-full">{time}</p>
-      <p className="w-full mt-1">{desc}</p>
+      <p className="w-full mt-1"><strong>Highlight: </strong>{desc}</p>
       <p className="w-full mt-1">
         <strong>Leveraged </strong>
         {skills}
@@ -79,11 +79,9 @@ const About = () => {
               <p className="text-2xl w-full">
                 The University of Texas at Austin
               </p>
-              <p className="w-full">BS Electrical and Computer Engineering</p>
-              <p className="w-full mb-4">
-                MS Electrical and Computer Engineering
-              </p>
-              <p className="w-full">May 2021 - Present (Expected 2025)</p>
+              <p className="w-full mb-4"><strong>BS</strong> Electrical and Computer Engineering</p>
+
+              <p className="w-full">May 2021 - Present (Expected May 2024)</p>
               <p className="w-full">
                 <strong>Concentration: </strong>Software Engineering and Systems
                 (SES)
@@ -93,7 +91,7 @@ const About = () => {
               </p>
             </p>
           </div>
-          <div className="mb-[30px]">
+          <div className="mb-[10px]">
             <div className="flex items-center align-middle mb-6">
 
               <span className="text-4xl text-left font-Syne font-extrabold items-left highlight-yellow-bg">
@@ -103,32 +101,32 @@ const About = () => {
               
             </div>
             <Job
-              title="Intern Software Engineer"
+              title="Software Engineer Intern"
               job="Hewlett Packard Enterprise"
               time="May 2023 - Present"
-              desc="Developing an SDK and CLI for company-wide vulnerability tracker platform to improve endpoint access"
-              skills="something"
+              desc="Created a developer SDK, CLI, user dashboard, and working on data integrations for company-wide vulnerability tracker platform"
+              skills="API/SDK development, React, Redux, SQL Server, Bash, Apache ECharts"
             />
             <Job
-              title="Intern AI/ML Engineer"
+              title="AI/ML Engineer Intern"
               job="State Street Corporation"
               time="Jan 2023 - May 2023"
-              desc="Architected and implemented new services to detect anomalies in financial information through ensemble-based learning"
-              skills="React, API development, server-side integration, Docker"
+              desc="Developed an ML-based anomaly detection application that profiles data and flags anomalies in sensitive financial data"
+              skills="SciPy, scikit-learn, pandas, NumPy, React, API development, Kafka, Docker, S3"
             />
             <Job
-              title="Intern Commercial Analyst"
+              title="Commercial Analyst Intern"
               job="Talen Energy"
               time="June 2022 - Aug 2022"
-              desc="Proposed and implemented a new bitcoin miner automation tool that lowered energy usage by more than 15%"
-              skills="C# .NET, Python, Azure SQL Server, predictive modeling"
+              desc="Designed, proposed, and implemented a new bitcoin miner automation tool that lowers energy usage by more than 15%"
+              skills="C# .NET, Python, Azure SQL Server, large data processing, predictive modelling"
             />
             <Job
-              title="Intern Software Engineer"
+              title="Software Engineer Intern"
               job="Datos Technologies"
               time="Oct 2019 - Jan 2020"
               desc="Maintained a popular point-of-sale Android application that allows users to apply smart discounts to inventory"
-              skills="Java, Git, unit testing, Gradle, Android Studio"
+              skills="Java, Git, Unit testing, Gradle, Android Studio"
             />
           </div>
           <Resume />

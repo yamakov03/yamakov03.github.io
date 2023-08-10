@@ -19,11 +19,10 @@ function SkillsTicker() {
         <span class="text-4xl mx-4">Bootstrap</span>
         <span class="text-4xl mx-4">Azure Cloud</span>
         <span class="text-4xl mx-4">PostgreSQL</span>
-        <span class="text-4xl mx-4">Oracle</span>
+        <span class="text-4xl mx-4">S3</span>
         <span class="text-4xl mx-4">MongoDB</span>
       </div>
       <div class="absolute top-0 py-8 animate-marquee2 whitespace-nowrap">
-        <span class="text-4xl mx-4">Python</span>
         <span class="text-4xl mx-4">Python</span>
         <span class="text-4xl mx-4">JavaScript</span>
         <span class="text-4xl mx-4">Java</span>
@@ -39,7 +38,7 @@ function SkillsTicker() {
         <span class="text-4xl mx-4">Bootstrap</span>
         <span class="text-4xl mx-4">Azure Cloud</span>
         <span class="text-4xl mx-4">PostgreSQL</span>
-        <span class="text-4xl mx-4">Oracle</span>
+        <span class="text-4xl mx-4">S3</span>
         <span class="text-4xl mx-4">MongoDB</span>
       </div>
     </div>
