@@ -7,8 +7,8 @@ const Link = ({ page, Page, setPage }) => {
   const lowerCasePage = page.toLowerCase();
   return (
     <AnchorLink
-    offset='55'
-      className="hover:text-secondary-color font-Darker_Grotesque min-[760px]:text-2xl sm:text-6xl"
+      offset='55'
+      className="hover:text-secondary-color font-Darker_Grotesque min-[1000px]:text-2xl sm:text-6xl"
       href={`#${lowerCasePage}`}
       onClick={() => setPage(lowerCasePage)}
     >
@@ -20,18 +20,17 @@ const Link = ({ page, Page, setPage }) => {
 const Navbar = ({ isTopOfPage, Page, setPage }) => {
 
   window.addEventListener("resize", (event) => {
-    if (window.innerWidth > 760) {
+    if (window.innerWidth > 1000) {
       setIsToggled(false);
     }
   });
 
   const [isToggled, setIsToggled] = useState(false);
-  const isMobile = useMediaQuery("(max-width: 760px)");
+  const isMobile = useMediaQuery("(max-width: 1000px)");
   return (
     <nav
-      className={`${
-        isTopOfPage ? "" : "bg-white border-black border-b-[1px]"
-      } z-40 w-full fixed top-0 py-1  `}
+      className={`${isTopOfPage ? "" : "bg-white border-black border-b-[1px]"
+        } z-40 w-full fixed top-0 py-1  `}
     >
       <div className="flex items-center justify-between mx-auto w-5/6 ">
         <AnchorLink
@@ -45,11 +44,12 @@ const Navbar = ({ isTopOfPage, Page, setPage }) => {
 
         {/* DESKTOP NAV */}
         {!isMobile ? (
-          <div className="flex justify-between gap-16 text-lg font-semibold ">
-            <Link page="Home" Page={Page} setPage={setPage} />
+          <div className="flex justify-between gap-12 text-lg font-semibold ">
             <Link page="About" Page={Page} setPage={setPage} />
             <Link page="Projects" Page={Page} setPage={setPage} />
             <Link page="Contact" Page={Page} setPage={setPage} />
+            <a className="hover:text-secondary-color font-Darker_Grotesque min-[1000px]:text-2xl sm:text-6xl" href="http://yamakov.tech/blog">Blog</a>
+            <a className="hover:text-secondary-color font-Darker_Grotesque min-[1000px]:text-2xl sm:text-6xl" href="../assets/dy_resume_2023.pdf">Resume</a>
           </div>
         ) : (
           <div className="z-40">
@@ -61,18 +61,16 @@ const Navbar = ({ isTopOfPage, Page, setPage }) => {
                   setIsToggled(!isToggled);
                 }
               }}
+              toggled={isToggled}
             />
           </div>
         )}
 
         {/* MOBILE MENU POPUP */}
         {isMobile && isToggled && (
-          <div className="fixed right-0 bottom-0 h-full w-[250px] bg-white border-l-[1px] border-black" >
+          <div className="fixed right-0 bottom-0 h-full w-[300px] bg-white border-l-[1px] border-black" >
             {/* MENU ITEMS */}
             <div className="ml-[12%] mt-[20vh] font-Darker_Grotesque">
-              <div className="mb-4">
-                <Link page="Home" Page={Page} setPage={setPage} />
-              </div>
               <div className="mb-4">
                 <Link page="About" Page={Page} setPage={setPage} />
               </div>
@@ -81,6 +79,12 @@ const Navbar = ({ isTopOfPage, Page, setPage }) => {
               </div>
               <div className="mb-4">
                 <Link page="Contact" Page={Page} setPage={setPage} />
+              </div>
+              <div className="mb-4">
+                <a className="hover:text-secondary-color font-Darker_Grotesque min-[1000px]:text-2xl sm:text-6xl" href="http://yamakov.tech/blog">Blog</a>
+              </div>
+              <div className="mb-4">
+                <a className="hover:text-secondary-color font-Darker_Grotesque min-[1000px]:text-2xl sm:text-6xl" href="../assets/dy_resume_2023.pdf">Resume</a>
               </div>
             </div>
           </div>

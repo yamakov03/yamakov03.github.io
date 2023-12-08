@@ -23,23 +23,15 @@ const Project = ({ title, altTitle, desc, link, order, note="" }) => {
       >
         <p className="text-2xl w-full font-syne">{title}</p>
         <p className="mt-5 text-md lg:text-xl  xl:pe-[30%] pe-0">{desc}</p>
-        {/* <a href={link}
-          className={` ${link !== "" ? "visible" : "hidden"} group mt-5 text-xl inline-flex items-center justify-center
-            rounded-xl border-2 border-black text-black bg-accent-color px-5 py-3
-            font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none 
-            focus:outline-none focus:shadow-none focus:ring-0 w-[200px]`}
-        >
-          <p className={"me-[5px] font-semibold"}>Check it out </p>
-          <HiArrowNarrowRight />
-          
-        </a> */}
         <a href={link} className={`${link !== "" ? "visible" : "hidden"} pb-5  group/btn flex align-center items-center w-[150px] mt-4 text-xl hover:opacity-50 transition-opacity duration-200`}>
           <p className={"me-[5px] font-semibold my-2"}>Check it out </p>
           <HiArrowNarrowRight />
           <span
             class="pointer-events-none border-2 rounded-lg bg-black text-white flex-wrap absolute mt-[80px] lg:w-[375px] opacity-0 transition-opacity group-hover/btn:opacity-100"
           >
-           <p className="p-1 text-sm">{note}</p>
+            {note !== "" &&
+              <p className="px-2 py-1 text-sm">{note}</p>
+            }
           </span>
         </a>
       </div>
@@ -75,7 +67,7 @@ function Projects() {
     <>
       <section id="projects" className="">
         {/* HEADINGS */}
-        <div className="justify-center flex items-center h-[120px] bg-primary-color text-black">
+        <div className="justify-center flex items-center h-[120px] bg-secondary-color text-white">
           <span className="text-4xl lg:text-6xl font-Syne font-semibold text-center md:me-5 me-1">
             Featured Projects
             {/* <span className="blinker relative top-[-5px]">|</span> */}
@@ -87,13 +79,20 @@ function Projects() {
 
         {/* PROJECTS */}
         <div className="justify-center border-black border-t-[1px] bg-white">
-
+          <Project
+            title="Toolio"
+            altTitle="toolio"
+            desc="Toolio is an MVP lightweight project management tool for developers, allowing users to add tools to their projects and track their progress. Users can also join projects and collaborate with other developers. Built with Next.js 14, MongoDB, and Material Tailwind."
+            link="https://toolio-next.vercel.app/"
+            order="order-1"
+            note=""
+          />
           <Project
             title="Spotify Next"
             altTitle="spotifynext"
             desc="A Refreshed Spotify Client built with Next.js 13. Users can login with their Spotify account and access their playlists, saved songs, and more."
             link="https://spotifynxt.vercel.app/"
-            order="order-1"
+            order=""
             note="Spotify API requires users to be added manually in dev mode. Please contact me for access!"
           >
           </Project>
@@ -102,7 +101,7 @@ function Projects() {
             altTitle="news"
             desc="A real-time news parser built with Python and Flask. Users can search for news articles and view the latest headlines."
             link="https://justthenews-flask-app.onrender.com/"
-            order=""
+            order="order-1"
             note="Heads up, the app might take a few seconds to load!"
           />
           <Project
@@ -110,7 +109,7 @@ function Projects() {
             altTitle="LiteNotes"
             desc="A lightweight notes web app built with Python and Flask. Users can create, edit, and delete notes."
             link="https://litenotes-flask-web-app.onrender.com/"
-            order="order-1"
+            order=""
             note="Heads up, the app might take a few seconds to load!"
           />
           <Project
@@ -118,9 +117,10 @@ function Projects() {
             altTitle="nyc"
             desc="My camera and Manhattan's touristy spots, bustling streets, and incredible architecture. Built with Python and Flask."
             link="https://nyc-gallery-app.onrender.com/"
-            order=""
+            order="order-1"
             note="Heads up, the app might take a few seconds to load!"
           />
+          
 
 
           {/* <Project

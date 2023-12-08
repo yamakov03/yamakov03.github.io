@@ -4,12 +4,18 @@ import Resume from "../components/Resume";
 
 const Job = ({ title, job, time, desc, skills }) => {
   return (
-    <div>
-      <p className="text-2xl mt-6 w-full">
-        {title} @ {job}
-      </p>
-      <p className="w-full">{time}</p>
-      <p className="w-full mt-1"><strong>Highlight: </strong>{desc}</p>
+    <div className="mb-6">
+      <div className="flex items-center justify-between mt-2">
+        <p className="text-2xl">
+          {title}
+        </p>
+        <div className="text-end">
+          <p className="text-lg">{job}</p>
+          <p className="w-full">{time}</p>
+        </div>
+      </div>
+
+      <p className="w-full mt-1">{desc}</p>
       <p className="w-full mt-1">
         <strong>Leveraged </strong>
         {skills}
@@ -51,9 +57,9 @@ const About = () => {
               A SWE longhorn from Austin, Texas 🤘
             </span>
             <p className="md:text-2xl sm:text-xl pt-4">
-              I'm a electrical and computer engineering junior at UT
-              Austin, planning to graduate with my BS in 2024. Right now, I'm
-              working as a software engineer intern at HPE on product security. I'm interested
+              I'm an ECE student at UT
+              Austin, graduating with my BS in May of 2024. Right now, I'm
+              a software engineer intern at HPE building important tools teams use every day. I'm interested
               in opportunities to learn and grow in my career! <br></br>
               <br></br>I like to approach complex problems by simplifying them. As
               Leonardo Da Vinci once said,{" "}
@@ -77,29 +83,29 @@ const About = () => {
               </span>
             </div>
             <p className="w-full mt-4 mb-10">
-              <p className="text-2xl w-full">
-                The University of Texas at Austin
-              </p>
-              <p className="w-full mb-4"><strong>BS</strong> Electrical and Computer Engineering</p>
+              <div className="flex items-center justify-between mt-2 mb-4">
+                  <p className="text-2xl">The University of Texas at Austin</p>
 
-              <p className="w-full">May 2021 - Present (Expected May 2024)</p>
+
+                <div className="text-end">
+                  <p className="text-lg">May 2021 - May 2024</p>
+                </div>
+              </div>
+              <p className="">Bachelor of Science in Electrical and Computer Engineering</p>
+
               <p className="w-full">
-                <strong>Concentration: </strong>Software Engineering and Systems
-                (SES)
+                <strong>Concentration: </strong>Software Engineering and Design
               </p>
               <p className="w-full">
                 <strong>Cumulative GPA: </strong>3.65/4.00
               </p>
             </p>
           </div>
-          <div className="mb-[20px]">
+          <div className="mb-[20px] divide-y divide-black">
             <div className="flex items-center align-middle mb-6">
-
               <span className="text-4xl text-left font-Syne font-extrabold items-left highlight-yellow-bg">
                 Work
-
               </span>
-              
             </div>
             <Job
               title="Software Engineer Intern"
@@ -133,7 +139,7 @@ const About = () => {
           <Resume />
         </div>
         <img
-          className="flex w-1/2 max-[1023px]:hidden lg:visible object-cover min-[1600px]:h-[1200px] h-[1500px] border-s-[1px] border-black unselect"
+          className="flex w-1/2 max-[1200px]:hidden lg:visible object-cover min-[1600px]:h-[1200px] h-[1500px] border-s-[1px] border-black unselect"
           alt="working"
           src="assets/work.jpg"
         />

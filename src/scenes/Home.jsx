@@ -25,7 +25,7 @@ const Home = ({ setPage }) => {
       >
         <img
             alt="profile"
-            className="min-[800px]:max-w-[500px] md:max-w-[300px] unselect home__img z-10 h-auto"
+            className="min-[800px]:max-w-[450px] md:max-w-[300px] unselect home__img z-10 h-auto"
             src="assets/profileImg.jpg"
           />
 
@@ -46,22 +46,21 @@ const Home = ({ setPage }) => {
       "
       >
         {/* HEADINGS */}
-        <p className="min-[800px]:text-9xl sm:text-6xl font-Syne">Daniel Yamakov</p>
+        <p className="min-[800px]:text-8xl sm:text-6xl font-Syne">Daniel Yamakov</p>
         <p className="mt-2 mb-10 min-[800px]:text-4xl sm:text-xl">
           Hey! I'm studying software engineering at UT Austin.
         </p>
-        <div className="inline-flex items-center justify-center flex-wrap">
+        <div className="inline-flex items-center justify-start flex-wrap gap-4">
           <AnchorLink
             className="text-xl inline-flex items-center justify-center
-            rounded-xl me-0 min-[800px]:me-5 border-2 border-black text-black bg-accent-color px-5 py-3
+            rounded-xl border-2 border-black text-black bg-accent-color px-5 py-3
             font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none 
             focus:outline-none focus:shadow-none focus:ring-0 w-[170px]"
             href="#contact"
           >
             Say hello 👋
           </AnchorLink>
-          <Resume />
-          <div className="justify-center flex min-[800px]:ms-10 min-[800px]:pt-0 pt-5">
+          <div className="justify-center flex min-[800px]:ms-10 min-[800px]:pt-0">
           <SocialMediaIcons />
           </div>
           
