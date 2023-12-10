@@ -8,7 +8,7 @@ module.exports = {
       semi: "800px",
       lg: "1024px",
       xl: "1280px",
-      "home-xl": "1137px",
+      "home-xl": "1153px",
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
     },

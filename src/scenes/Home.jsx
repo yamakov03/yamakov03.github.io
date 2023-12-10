@@ -40,7 +40,7 @@ const Home = ({ setPage }) => {
       md:basis-[100px]
       sm:basis-[300px]
       sm:mt-12 
-      md:text-left 
+      min-[800px]:text-left 
       sm:items-center 
       sm:text-center 
       "
@@ -50,7 +50,7 @@ const Home = ({ setPage }) => {
         <p className="mt-2 mb-10 min-[800px]:text-4xl sm:text-xl">
           Hey! I'm studying software engineering at UT Austin.
         </p>
-        <div className="inline-flex items-center justify-start flex-wrap gap-4">
+        <div className="inline-flex items-center min-[800px]:justify-start justify-center flex-wrap gap-7">
           <AnchorLink
             className="text-xl inline-flex items-center justify-center
             rounded-xl border-2 border-black text-black bg-accent-color px-5 py-3
