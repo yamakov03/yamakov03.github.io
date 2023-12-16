@@ -8,7 +8,7 @@ const Link = ({ page, Page, setPage }) => {
   return (
     <AnchorLink
       offset='55'
-      className="hover:text-secondary-color font-Darker_Grotesque min-[1000px]:text-2xl sm:text-6xl"
+      className="hover:text-secondary-color font-Darker_Grotesque min-[1000px]:text-2xl sm:text-6xl transition-all"
       href={`#${lowerCasePage}`}
       onClick={() => setPage(lowerCasePage)}
     >
@@ -48,8 +48,8 @@ const Navbar = ({ isTopOfPage, Page, setPage }) => {
             <Link page="About" Page={Page} setPage={setPage} />
             <Link page="Projects" Page={Page} setPage={setPage} />
             <Link page="Contact" Page={Page} setPage={setPage} />
-            <a className="hover:text-secondary-color font-Darker_Grotesque min-[1000px]:text-2xl sm:text-6xl" href="http://yamakov.tech/blog">Blog</a>
-            <a className="hover:text-secondary-color font-Darker_Grotesque min-[1000px]:text-2xl sm:text-6xl" href="../assets/dy_resume_2023.pdf">Resume</a>
+            <a className="hover:text-secondary-color font-Darker_Grotesque min-[1000px]:text-2xl sm:text-6xl transition-all" href="http://yamakov.tech/blog">Blog</a>
+            <a className="hover:text-secondary-color font-Darker_Grotesque min-[1000px]:text-2xl sm:text-6xl transition-all" href="../assets/dy_resume_2024.pdf">Resume</a>
           </div>
         ) : (
           <div className="z-40">
@@ -81,10 +81,10 @@ const Navbar = ({ isTopOfPage, Page, setPage }) => {
                 <Link page="Contact" Page={Page} setPage={setPage} />
               </div>
               <div className="mb-4">
-                <a className="hover:text-secondary-color font-Darker_Grotesque min-[1000px]:text-2xl sm:text-6xl" href="http://yamakov.tech/blog">Blog</a>
+                <a className="hover:text-secondary-color font-Darker_Grotesque min-[1000px]:text-2xl sm:text-6xl transition-all" href="http://yamakov.tech/blog">Blog</a>
               </div>
               <div className="mb-4">
-                <a className="hover:text-secondary-color font-Darker_Grotesque min-[1000px]:text-2xl sm:text-6xl" href="../assets/dy_resume_2023.pdf">Resume</a>
+                <a className="hover:text-secondary-color font-Darker_Grotesque min-[1000px]:text-2xl sm:text-6xl transition-all" href="../assets/dy_resume_2024.pdf">Resume</a>
               </div>
             </div>
           </div>

@@ -11,7 +11,7 @@
   --background-color: #ffffff;
   --primary-color: #f2f4f8;
   --secondary-color: #0f62fe;
-  --accent-color: #d0e2ff;
+  --accent-color: #f2f4f8;
   --highlight-color: #f2d363;
 }
 
@@ -33,7 +33,7 @@
   width: auto;
   justify-self: center;
   animation: profile_animate 8s ease-in-out infinite 0s;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 @keyframes profile_animate {
@@ -137,53 +137,6 @@ span.highlight-green {
     -18.1px -27.3px 30px var(--primary-color);
 }
 
-span.highlight-yellow-primary {
-  background: linear-gradient(
-      104deg,
-      rgba(253, 255, 50, 0) 0.9%,
-      rgba(253, 255, 50, 1.25) 2.4%,
-      rgba(253, 255, 50, 0.5) 5.8%,
-      rgba(253, 255, 50, 0.1) 93%,
-      rgba(253, 255, 50, 0.7) 96%,
-      rgba(253, 255, 50, 0) 98%
-    ),
-    linear-gradient(
-      183deg,
-      rgba(253, 255, 50, 0) 0%,
-      rgba(253, 255, 50, 0.3) 7.9%,
-      rgba(253, 255, 50, 0) 15%
-    );
-  padding: 0em 5px;
-  -webkit-box-decoration-break: clone;
-  margin-left: -5px;
-  border-radius: 7.5px;
-  text-shadow: 12px -5px 10px rgba(253, 255, 50, 0.7),
-  21px -5.1px 15.3px var(--primary-color),
-  -18.1px -27.3px 30px var(--primary-color);
-}
-span.highlight-yellow-accent {
-  background: linear-gradient(
-      104deg,
-      rgba(253, 255, 50, 0) 0.9%,
-      rgba(253, 255, 50, 1.25) 2.4%,
-      rgba(253, 255, 50, 0.5) 5.8%,
-      rgba(253, 255, 50, 0.1) 93%,
-      rgba(253, 255, 50, 0.7) 96%,
-      rgba(253, 255, 50, 0) 98%
-    ),
-    linear-gradient(
-      183deg,
-      rgba(253, 255, 50, 0) 0%,
-      rgba(253, 255, 50, 0.3) 7.9%,
-      rgba(253, 255, 50, 0) 15%
-    );
-  padding: .2em 20px;
-  -webkit-box-decoration-break: clone;
-  border-radius: 7.5px;
-  text-shadow: 12px -5px 10px rgba(253, 255, 50, 0.7),
-    21px -5.1px 15.3px var(--accent-color),
-    -18.1px -27.3px 30px var(--accent-color);
-}
 span.highlight-yellow-bg {
   background: linear-gradient(
       104deg,
@@ -200,7 +153,7 @@ span.highlight-yellow-bg {
       rgba(253, 255, 50, 0.3) 7.9%,
       rgba(253, 255, 50, 0) 15%
     );
-  padding: .2em 20px;
+  padding: .2em 10px;
   -webkit-box-decoration-break: clone;
   margin-left: -20px;
   border-radius: 7.5px;
