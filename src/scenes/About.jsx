@@ -62,7 +62,7 @@ const About = ({ setPage }) => {
             <Job
               title="Software Engineer Intern"
               job="Hewlett Packard Enterprise"
-              time="May 2023 - Present"
+              time="May 2023 - Jan 2024"
               desc="Product security"
               skills={['API/SDK development', 'React', 'Redux', 'SQL Server', 'Bash', 'Apache ECharts']}
             />
