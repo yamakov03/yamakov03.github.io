@@ -4,14 +4,12 @@ import Header from "../components/Header";
 
 function Contact() {
   return (
-    <section id="contact" className="py-[90px] border-black">
+    <section id="contact" className="py-[90px] border-black bg-base-100">
       {/* HEADINGS */}
       <div className="flex">
-        <div className="flex flex-col w-full items-center mx-6">
+        <div className="flex flex-col items-center w-full mx-6">
           <div>
-            <div className="ms-2">
-            <Header text="Say hello." />
-            </div>
+            <Header text="Say hello" />
             <p className="mt-3 mb-2">
               I'm always open to talk about jobs, projects, or research.
             </p>
@@ -32,7 +30,7 @@ function Contact() {
                     id="name"
                     name="name"
                     class="text__box block p-3 w-full transition hover:shadow-none 
-                    focus:outline-none focus:shadow-none"
+                    focus:outline-none focus:shadow-none bg-base-200"
                     placeholder="John Doe*"
                     required
                   />
@@ -46,7 +44,7 @@ function Contact() {
                     id="email"
                     name="email"
                     class="text__box block w-full p-2.5 transition hover:shadow-none 
-                    focus:outline-none focus:shadow-none"
+                    focus:outline-none focus:shadow-none bg-base-200"
                     placeholder="name@example.com*"
                     required
                   />
@@ -61,16 +59,16 @@ function Contact() {
                     name="message"
                     rows="6"
                     class="text__box block p-2.5 w-full transition hover:shadow-none
-                    focus:outline-none focus:shadow-none"
+                    focus:outline-none focus:shadow-none bg-base-200"
                     placeholder="Write something here*"
                   ></textarea>
                 </div>
                 <button
                   type="submit"
                   class="items-center justify-center flex
-                  rounded-xl border-[1px] border-black text-black bg-accent-color px-4 py-3
-                  font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none 
-                  focus:outline-none focus:ring-0 focus:shadow-none text-xl"
+                  rounded-xl border-[1px] border-black btn-lg btn btn-secondary px-4 py-3
+                  shadow-[6px_6px_0_0_#000] transition hover:shadow-none
+                  focus:outline-none focus:ring-0 focus:shadow-none hover:border-black text-xl"
                 >
                   Send a message ✉️
                 </button>

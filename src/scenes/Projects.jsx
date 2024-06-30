@@ -1,11 +1,9 @@
-import React, { useEffect, useRef } from "react";
-import { HiArrowNarrowRight } from "react-icons/hi";
-import handleViewport, { useInViewport } from 'react-in-viewport';
-import SkillsTicker from "../components/SkillsTicker";
-import { AiFillGithub } from "react-icons/ai";
-import SubHeader from "../components/SubHeader";
+import React, { useEffect } from "react";
+import { HiArrowLeft, HiArrowNarrowRight } from "react-icons/hi";
+import Header from "../components/Header";
+import { Carousel } from "flowbite-react";
 
-const Project = ({ title, altTitle, desc, link, order, note = "" }) => {
+const Project = ({ title, altTitle, desc, link, tag, note = "" }) => {
   const projectTitle = altTitle.split(" ").join("-").toLowerCase();
   const [hover, setHover] = React.useState(false);
   useEffect(() => {
@@ -17,42 +15,39 @@ const Project = ({ title, altTitle, desc, link, order, note = "" }) => {
       }
     }, true);
   }, [])
+
   return (
-    <div className="group flex flex-wrap justify-center" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+    <div className="flex h-full w-full max-[800px]:flex-col justify-center p-3 duration-500 border border-black rounded-2xl group bg-base-200 hover:bg-base-300" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} id={tag}>
       <div
-        className={`py-10 ${order} max-lg:order-1 cursor-default border-black ${order === "order-1" ? null : "lg:border-r-[1px] "} border-b-[1px] lg:w-1/2 sm:w-full h-auto flex justify-center flex-col xl:ps-[100px] px-6 bg-white group-hover:bg-primary-color transition-colors duration-500`}
+        className={` order-1 flex justify-center flex-col  px-6 transition-colors duration-500 lg:w-[60%] w-[90%] md:me-[35px] me-0 `}
       >
-        
-        <span className="text-4xl max-[800px]:text-2xl text-left font-Syne font-bold items-left">
+
+        <span className="text-4xl max-[800px]:text-2xl max-[800px]:mt-[20px] text-left font-Syne font-bold items-left">
           {title}
         </span>
-        <p className="mt-5 text-md lg:text-xl  xl:pe-[30%] pe-0">{desc}</p>
-        <a href={link} className={`${link !== "" ? "visible" : "hidden"} pb-5  group/btn flex align-center items-center w-[150px] mt-4 text-xl transition-opacity duration-200`}>
-          <p className={"me-[5px] font-semibold my-2"}>Check it out </p>
-          
-          <HiArrowNarrowRight className="group-hover/btn:translate-x-1 transition-all" />
-          {note !== "" &&
-            <span
-              class="pointer-events-none border-[1px] rounded-lg border-black text-black flex-wrap absolute mt-[80px] me-[20px] opacity-0 transition-opacity group-hover/btn:opacity-100"
-            >
-              <p className="px-2 py-1 text-sm">{note}</p>
-            </span>
-          }
+        <p className="mt-5 text-md lg:text-xl">{desc}</p>
+        <a href={link} className={`${link !== "" ? "visible" : "hidden"}`}>
+
+          <div class={`flex items-center ${note !== "" ? "tooltip tooltip-secondary" : ""}`} data-tip={note}>
+            <p className={"me-[5px] font-semibold my-2"}>Check it out </p>
+            <HiArrowNarrowRight />
+          </div>
         </a>
       </div>
       {hover ?
-        <a href={link !== "" ? link : ""} className={`cursor-pointer bg-black ${order === "order-1" ? "lg:border-r-[1px]" : null} border-r-[0px] border-black border-b-[1px]
-          lg:w-1/2 sm:w-full flex overflow-hidden h-auto group-hover:opacity-100 lg:opacity-80 opacity-100 transition-opacity duration-500`}>
+        <a href={link !== "" ? link : ""} className={`cursor-pointer border-black border
+          w-full flex overflow-hidden h-auto group-hover:opacity-100 lg:opacity-80 opacity-100 transition-opacity duration-500 rounded-2xl`}>
           <img
-            className="unselect object-cover w-full"
+            className="object-cover w-full unselect rounded-2xl"
             src={`/assets/projects_gif/${projectTitle}.gif`}
             alt={projectTitle}
           />
         </a>
         :
-        <a href={link !== "" ? link : ""} className={`  cursor-pointer  ${order === "order-1" ? "lg:border-r-[1px]" : null} border-r-[0px] group-hover:opacity-100 lg:opacity-80 opacity-100 transition-opacity duration-500 bg-black border-black border-b-[1px] lg:w-1/2 sm:w-full flex overflow-hidden h-auto`}>
+        <a href={link !== "" ? link : ""} className={`  cursor-pointer border-black border
+        w-full flex overflow-hidden h-auto group-hover:opacity-100 lg:opacity-80 opacity-100 transition-opacity duration-500 rounded-2xl`}>
           <img
-            className="unselect object-cover w-full"
+            className="object-cover w-full unselect rounded-2xl"
             src={`/assets/projects_gif/${projectTitle}.png`}
             alt={projectTitle}
           />
@@ -68,16 +63,36 @@ const Project = ({ title, altTitle, desc, link, order, note = "" }) => {
 };
 
 function Projects() {
+
   return (
     <>
-      <section id="projects" className="">
-        <div className="justify-center border-black bg-white">
+
+      <section id="projects" className="flex w-full flex-col items-center justify-center border-black border-b-[1px] pb-[60px]">
+        <div className="w-full p-0 mt-[50px] lg:w-5/6 lg:p-3 ps-5 pb-2">
+          <Header text="Projects" />
+        </div>
+
+        <Carousel pauseOnHover indicators slide slideInterval={3000} rightControl={
+          <button className="btn btn-circle btn-primary shadow-none border border-black hover:bg-base-500 hover:border-black">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+
+          </button>
+        } leftControl={
+          <button className="btn btn-circle btn-primary shadow-none border border-black hover:bg-base-500 hover:border-black">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+            </svg>
+
+          </button>
+        } class="max-w-[1300px] relative space-x-4 p-2 w-full">
           <Project
             title="colorify."
             altTitle="colorify"
             desc="colorify is an open-source MIT-licensed browser extension designed to modify the look of any web element, anywhere. Colorify is available for Chrome."
             link="https://chromewebstore.google.com/detail/colorify/fodfjfhlogpjbjgkoelbfddkahniiblg?hl=en"
-            order="order-1"
+            tag="project1"
             note=""
           />
           <Project
@@ -85,7 +100,7 @@ function Projects() {
             altTitle="spotifynext"
             desc="A Refreshed Spotify Client built with Next.js 13. Users can login with their Spotify account and access their playlists, saved songs, and more."
             link="https://spotifynxt.vercel.app/"
-            order=""
+            tag="project2"
             note="Spotify API requires users to be added manually in dev mode. Please contact me for access!"
           />
           <Project
@@ -93,7 +108,7 @@ function Projects() {
             altTitle="toolio"
             desc="Toolio is an example lightweight project management platform for developers to manage project resources. Built with Next.js 14, MongoDB, and Material Tailwind."
             link="https://toolio-next.vercel.app/"
-            order="order-1"
+            tag="project3"
             note=""
           />
           <Project
@@ -101,7 +116,7 @@ function Projects() {
             altTitle="news"
             desc="A real-time news parser built with Python and Flask. Users can search for news articles and view the latest headlines."
             link="https://justthenews-flask-app.onrender.com/"
-            order=""
+            tag="project4"
             note="The app might take a few seconds to load!"
           />
           <Project
@@ -109,7 +124,7 @@ function Projects() {
             altTitle="LiteNotes"
             desc="A lightweight notes web app built with Python and Flask. Users can create, edit, and delete notes."
             link="https://litenotes-flask-web-app.onrender.com/"
-            order="order-1"
+            tag="project5"
             note="The app might take a few seconds to load!"
           />
           <Project
@@ -117,24 +132,11 @@ function Projects() {
             altTitle="nyc"
             desc="My camera and Manhattan's touristy spots, bustling streets, and incredible architecture. Built with Python and Flask."
             link="https://nyc-gallery-app.onrender.com/"
-            order=""
+            tag="project6"
             note="The app might take a few seconds to load!"
           />
-
-
-
-          {/* <Project
-          title="eHills Dynamic Auction Platform"
-          desc="A client-server Java application that allows multiple users to bid, purchase and interact with items stored on a MongoDB database. The project contains three main components: the server backend, the client GUI (JavaFX), and the client backend."
-          link=""
-        />
-        <Img
-          title="ehills project"
-          link=""
-        /> */}
-
-        </div>
-      </section>
+        </Carousel>
+      </section >
       {/* <SkillsTicker /> */}
     </>
   );
