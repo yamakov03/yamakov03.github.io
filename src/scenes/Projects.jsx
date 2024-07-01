@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { HiArrowLeft, HiArrowNarrowRight } from "react-icons/hi";
 import Header from "../components/Header";
-import { Carousel } from "flowbite-react";
+import { Carousel, Flowbite } from "flowbite-react";
 
 const Project = ({ title, altTitle, desc, link, tag, note = "" }) => {
   const projectTitle = altTitle.split(" ").join("-").toLowerCase();
@@ -34,27 +34,16 @@ const Project = ({ title, altTitle, desc, link, tag, note = "" }) => {
           </div>
         </a>
       </div>
-      {hover ?
-        <a href={link !== "" ? link : ""} className={`cursor-pointer border-black border
-          w-full flex overflow-hidden h-auto group-hover:opacity-100 lg:opacity-80 opacity-100 transition-opacity duration-500 rounded-2xl`}>
-          <img
-            className="object-cover w-full unselect rounded-2xl"
-            src={`/assets/projects_gif/${projectTitle}.gif`}
-            alt={projectTitle}
-          />
-        </a>
-        :
-        <a href={link !== "" ? link : ""} className={`  cursor-pointer border-black border
-        w-full flex overflow-hidden h-auto group-hover:opacity-100 lg:opacity-80 opacity-100 transition-opacity duration-500 rounded-2xl`}>
-          <img
-            className="object-cover w-full unselect rounded-2xl"
-            src={`/assets/projects_gif/${projectTitle}.png`}
-            alt={projectTitle}
-          />
-        </a>
 
+      <a href={link !== "" ? link : ""} className={`cursor-pointer border-black border
+          w-full flex overflow-hidden h-auto group-hover:opacity-100 opacity-100 transition-opacity duration-500 rounded-2xl`}>
+        <img
+          className="object-cover w-full unselect rounded-2xl"
+          src={`/assets/projects_gif/${projectTitle}.gif`}
+          alt={projectTitle}
+        />
+      </a>
 
-      }
 
     </div>
 
@@ -68,19 +57,18 @@ function Projects() {
     <>
 
       <section id="projects" className="flex w-full flex-col items-center justify-center border-black border-b-[1px] pb-[60px]">
-        <div className="w-full p-0 mt-[50px] lg:w-5/6 lg:p-3 ps-5 pb-2">
+        <div className="py-10">
           <Header text="Projects" />
         </div>
-
-        <Carousel pauseOnHover indicators slide slideInterval={3000} rightControl={
-          <button className="btn btn-circle btn-primary shadow-none border border-black hover:bg-base-500 hover:border-black">
+        <Carousel pauseOnHover slide slideInterval={3000} rightControl={
+          <button className="btn btn-circle border-none absolute end-4 bottom-[-45px] shadow-none bg-opacity-10 hover:bg-base-200 bg-base-100">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
             </svg>
 
           </button>
         } leftControl={
-          <button className="btn btn-circle btn-primary shadow-none border border-black hover:bg-base-500 hover:border-black">
+          <button className="btn btn-circle absolute start-0 bottom-[-45px]  border-none shadow-none bg-opacity-10 hover:bg-base-200 bg-base-100">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
             </svg>

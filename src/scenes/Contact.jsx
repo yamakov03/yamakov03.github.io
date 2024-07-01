@@ -4,7 +4,7 @@ import Header from "../components/Header";
 
 function Contact() {
   return (
-    <section id="contact" className="py-[90px] border-black bg-base-100">
+    <section id="contact" className="py-[70px] border-black bg-base-200">
       {/* HEADINGS */}
       <div className="flex">
         <div className="flex flex-col items-center w-full mx-6">
@@ -30,7 +30,7 @@ function Contact() {
                     id="name"
                     name="name"
                     class="text__box block p-3 w-full transition hover:shadow-none 
-                    focus:outline-none focus:shadow-none bg-base-200"
+                    focus:outline-none focus:shadow-none bg-base-100"
                     placeholder="John Doe*"
                     required
                   />
@@ -44,7 +44,7 @@ function Contact() {
                     id="email"
                     name="email"
                     class="text__box block w-full p-2.5 transition hover:shadow-none 
-                    focus:outline-none focus:shadow-none bg-base-200"
+                    focus:outline-none focus:shadow-none bg-base-100"
                     placeholder="name@example.com*"
                     required
                   />
@@ -59,7 +59,7 @@ function Contact() {
                     name="message"
                     rows="6"
                     class="text__box block p-2.5 w-full transition hover:shadow-none
-                    focus:outline-none focus:shadow-none bg-base-200"
+                    focus:outline-none focus:shadow-none bg-base-100"
                     placeholder="Write something here*"
                   ></textarea>
                 </div>

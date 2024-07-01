@@ -31,7 +31,7 @@ const Job = ({ title, job, time, desc, skills }) => {
   );
 };
 
-const About = ({ setPage }) => {
+const About = () => {
 
   return (
     <section id="about" className="border-b-[1px] border-black bg-base-200 flex align-middle items-center justify-center flex-col">
@@ -43,7 +43,7 @@ const About = ({ setPage }) => {
         </div>
 
         <div class="mb-10 text-justify">
-          I'm a <b>software engineer at SpaceX</b> currently building solutions to accelerate Starship manufacturing. I'm also working on my <b>Masters in Computer Science</b> online at Georgia Institute of Technology. I got my <b>BS in Electrical and Computer Engineering</b> at The University of Texas at Austin. I love learning and building creative solutions to tough problems.
+          I'm a <b>software engineer at SpaceX</b> currently building solutions to accelerate Starship manufacturing. I'm also working on my <b>Masters in Computer Science</b> online at Georgia Institute of Technology. I got my <b>BS in Electrical and Computer Engineering</b> at The University of Texas at Austin. I love learning and I'm excited to build creative solutions to tough problems.
         </div>
 
         <div class="mb-5">
@@ -129,7 +129,7 @@ const About = ({ setPage }) => {
         <ul class="list-disc lg:columns-5 columns-2 mx-6">
           <li>MongoDB</li>
           <li>PostgreSQL</li>
-          <li>Google Cloud/Firebase</li>
+          <li>GCP/Firebase</li>
           <li>AWS</li>
         </ul>
         <p className="text-xl text-bold font-Syne text-secondary">Tools</p>

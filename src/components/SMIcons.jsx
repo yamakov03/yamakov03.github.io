@@ -4,7 +4,7 @@ import { AiFillGithub } from "react-icons/ai";
 
 const SocialMediaIcons = () => {
   return (
-    <div className="flex md:justify-start gap-7 ">
+    <div className="flex md:justify-start gap-7  ">
       <a href="https://github.com/yamakov03" role="button">
         <AiFillGithub className="text-5xl text__shadow" />
       </a>

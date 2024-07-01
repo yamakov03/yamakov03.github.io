@@ -180,3 +180,17 @@ span.highlight-yellow-bg {
     opacity: 0;
   }
 }
+
+#projects
+  > div.max-w-\[1300px\].relative.space-x-4.p-2.w-full
+  > div.absolute.bottom-5.left-1\/2.flex.-translate-x-1\/2.space-x-3 {
+  bottom: -37px;
+  padding: 10px;
+  border-radius: 100px;
+}
+
+#projects
+  > div.max-w-\[1300px\].relative.space-x-4.p-2.w-full
+  > div.absolute.bottom-5.left-1\/2.flex.-translate-x-1\/2.space-x-3
+  > button {
+}
