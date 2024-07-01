@@ -49,7 +49,7 @@ const Navbar = ({ isTopOfPage, Page, setPage }) => {
               <Link page="About" Page={Page} setPage={setPage} />
               <Link page="Projects" Page={Page} setPage={setPage} />
               <Link page="Contact" Page={Page} setPage={setPage} />
-              <a className="hover:text-secondary font-Darker_Grotesque min-[1000px]:text-2xl sm:text-4xl transition-all" href="http://yamakov.tech/blog">Blog</a>
+              <a className="hover:text-secondary font-Darker_Grotesque min-[1000px]:text-2xl sm:text-4xl transition-all" href="https://yamakov03.github.io/blog">Blog</a>
               <a className="hover:text-secondary font-Darker_Grotesque min-[1000px]:text-2xl sm:text-4xl transition-all" href="../assets/dy_resume_2024.pdf">Resume</a>
             </div>
           ) : (
@@ -85,7 +85,7 @@ const Navbar = ({ isTopOfPage, Page, setPage }) => {
               <Link page="Contact" Page={Page} setPage={setPage} />
             </div>
             <div className="mb-4">
-              <a className="hover:text-secondary font-Darker_Grotesque min-[1000px]:text-2xl sm:text-4xl transition-all" href="http://yamakov.tech/blog">Blog</a>
+              <a className="hover:text-secondary font-Darker_Grotesque min-[1000px]:text-2xl sm:text-4xl transition-all" href="https://yamakov03.github.io/blog">Blog</a>
             </div>
             <div className="mb-4">
               <a className="hover:text-secondary font-Darker_Grotesque min-[1000px]:text-2xl sm:text-4xl transition-all" href="../assets/dy_resume_2024.pdf">Resume</a>
