@@ -9,13 +9,12 @@ import Footer from "./scenes/Footer";
 function App() {
   const [Page, setPage] = useState("home");
   const [isTopOfPage, setIsTopOfPage] = useState(true);
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'corporate');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dim');
 
   const themes = [
     "light",
     "dark",
     "bumblebee",
-    "emerald",
     "corporate",
     "garden",
     "forest",
@@ -66,7 +65,7 @@ function App() {
           </svg>
 
         </div>
-        <ul tabindex="0" class="dropdown-content bg-base-300 h-[500px] overflow-scroll rounded-xl z-[1] w-52 p-2 shadow-none border border-black">
+        <ul tabindex="0" class="dropdown-content bg-base-300 h-[400px] overflow-scroll rounded-xl z-[1] w-52 p-2 shadow-none border border-black">
           {themes.map((themeName) => (
             <li key={themeName}>
               <button

@@ -1,10 +1,6 @@
-import React, { useEffect } from "react";
-import SkillsTicker from "../components/SkillsTicker";
-import Resume from "../components/Resume";
+import React from "react";
 import Header from "../components/Header";
-import SubHeader from "../components/SubHeader";
 import { Tag } from "../components/tag";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Timeline } from "../components/Timeline";
 
 const Job = ({ title, job, time, desc, skills }) => {
@@ -43,7 +39,7 @@ const About = () => {
         </div>
 
         <div class="mb-10 text-justify">
-          I'm a <b>software engineer at SpaceX</b> currently building solutions to accelerate Starship manufacturing. I'm also working on my <b>Masters in Computer Science</b> online at Georgia Institute of Technology. I got my <b>BS in Electrical and Computer Engineering</b> at The University of Texas at Austin. I love learning and I'm excited to build creative solutions to tough problems.
+          I'm a <b>software engineer at SpaceX</b> working on Starship manufacturing. I'm also completing my <b>MS CS</b> online at Georgia Institute of Technology. I got my <b>BS in Electrical and Computer Engineering</b> at The University of Texas at Austin. I like building software and making cool things.
         </div>
 
         <div class="mb-5">
@@ -82,9 +78,9 @@ const About = () => {
             desc="Spearheaded the design and implementation of a new anomaly detection service used company-wide and integrated it with existing services"
           />
           <Timeline
-            title="Commercial Analyst Intern (Crypto) at Talen Energy"
+            title="Commercial Analyst Intern at Talen Energy"
             subtitle="Jun 2022 - Aug 2022 | Houston, Texas"
-            desc="Built tools to assess and optimize Talen's bitcoin mining strategy that led to critical bug resolution and performance improvements"
+            desc="Built tools to assess and optimize data center strategy that led to critical bug resolution and performance improvements"
           />
         </div>
 
