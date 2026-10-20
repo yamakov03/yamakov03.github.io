@@ -3,54 +3,37 @@
   "version": "0.1.0",
   "homepage": "https://yamakov03.github.io",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@react-hook/media-query": "^1.1.1",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "daisyui": "^4.12.10",
-    "flowbite": "^1.8.1",
-    "flowbite-angular": "^0.0.2",
-    "flowbite-react": "^0.10.1",
-    "framer-motion": "^10.12.4",
-    "hamburger-react": "^2.5.0",
-    "react": "^18.2.0",
+    "daisyui": "^5.7.50",
+    "flowbite": "^4.0.2",
+    "flowbite-react": "^0.12.17",
+    "framer-motion": "^14.4.0",
+    "hamburger-react": "^2.5.2",
+    "react": "^19.3.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0",
-    "react-in-viewport": "^1.0.0-alpha.30",
-    "react-multi-carousel": "^2.8.5",
-    "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "react-dom": "^19.3.1",
+    "react-icons": "^5.7.0",
+    "react-in-viewport": "^1.0.0-beta.10",
+    "react-multi-carousel": "^2.8.6",
+    "web-vitals": "^6.2.3"
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0",
-    "tailwindcss": "^3.3.2"
+    "@tailwindcss/vite": "^4.3.3",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
+    "@vitejs/plugin-react": "^6.1.2",
+    "gh-pages": "^6.3.0",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.4"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b gh-pages -d build"
   }
 }

@@ -1,9 +1,57 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap");
+@import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+
+@plugin "daisyui" {
+  themes: light, dark, bumblebee, corporate, garden, forest, fantasy, wireframe, cmyk, business, acid, lemonade, winter, dim, sunset;
+}
+
+@source "../.flowbite-react/class-list.json";
+
+/* Keep hover working on touch, matching the Tailwind v3 behavior. */
+@custom-variant hover (&:hover);
+
+@theme {
+  --breakpoint-sm: 0px;
+  --breakpoint-md: 500px;
+  --breakpoint-semi: 800px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-home-xl: 1151px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  --font-Syne: "Syne", sans-serif;
+  --font-Darker_Grotesque: "Darker Grotesque", sans-serif;
+  --font-Work_Sans: "Work Sans", sans-serif;
+
+  --color-text-light-color: var(--text-light-color);
+  --color-text-dark-color: var(--text-dark-color);
+  --color-background-color: var(--background-color);
+  --color-primary-color: var(--primary-color);
+  --color-secondary-color: var(--secondary-color);
+  --color-accent-color: var(--accent-color);
+  --color-highlight-color: var(--highlight-color);
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee2: marquee2 30s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes marquee2 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+}
 
 :root {
   --text-light-color: #ffffff;
@@ -16,11 +64,24 @@
 }
 
 @layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
   html,
   body,
   #root {
     height: 100%;
-    font-family: Work Sans, sans-serif;
+    font-family: "Work Sans", sans-serif;
     background-color: var(--background-color);
   }
 }
@@ -157,7 +218,7 @@ span.highlight-yellow-bg {
   margin-left: -20px;
   border-radius: 7.5px;
   text-shadow: 12px -5px 10px rgba(253, 255, 50, 0.7),
-    21px -5.1px 50.3px oklch(var(--b1)), -18.1px -27.3px 50px oklch(var(--b1));
+    21px -5.1px 50.3px var(--color-base-100), -18.1px -27.3px 50px var(--color-base-100);
 }
 
 .blinker {

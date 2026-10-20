@@ -34,19 +34,19 @@ const About = () => {
       <div className="p-6 pt-10 lg:max-w-[900px] max-w-[100vw]">
 
 
-        <div class="mb-5">
+        <div className="mb-5">
           <Header text="About me" />
         </div>
 
-        <div class="mb-10 text-justify">
+        <div className="mb-10 text-justify">
           I'm a <b>software engineer at SpaceX</b> working on Starship manufacturing. I'm also completing my <b>MS CS</b> online at Georgia Institute of Technology. I got my <b>BS in Electrical and Computer Engineering</b> at The University of Texas at Austin. I like building software and making cool things.
         </div>
 
-        <div class="mb-5">
-          <div class="text-3xl w-full font-bold text-primary font-Syne">Education</div>
+        <div className="mb-5">
+          <div className="text-3xl w-full font-bold text-primary font-Syne">Education</div>
         </div>
 
-        <div class="time-line-container grid gap-4 mb-10">
+        <div className="time-line-container grid gap-4 mb-10">
           <Timeline
             title="MS Computer Science"
             subtitle="2024 - Present | Georgia Institute of Technology"
@@ -57,11 +57,11 @@ const About = () => {
           />
         </div>
 
-        <div class="mb-5">
-          <div class="text-3xl w-full font-bold text-primary font-Syne">Experience</div>
+        <div className="mb-5">
+          <div className="text-3xl w-full font-bold text-primary font-Syne">Experience</div>
         </div>
 
-        <div class="time-line-container mb-10">
+        <div className="time-line-container mb-10">
           <Timeline
             title="Software Engineer at SpaceX"
             subtitle="Jul 2024 - Present | Starbase, Texas"
@@ -84,11 +84,11 @@ const About = () => {
           />
         </div>
 
-        {/* <div class="mb-5">
-          <div class="text-3xl w-full font-bold text-primary font-Syne">Certifications</div>
+        {/* <div className="mb-5">
+          <div className="text-3xl w-full font-bold text-primary font-Syne">Certifications</div>
         </div>
 
-        <ul class="list-disc mx-6 mb-10 grid gap-2">
+        <ul className="list-disc mx-6 mb-10 grid gap-2">
           <li>
             <a href="#" target="_blank"> Certification Name (with link)</a>
           </li>
@@ -97,12 +97,12 @@ const About = () => {
           </li>
         </ul> */}
 
-        <div class="mb-5">
-          <div class="text-3xl w-full font-bold text-primary font-Syne">Skills</div>
+        <div className="mb-5">
+          <div className="text-3xl w-full font-bold text-primary font-Syne">Skills</div>
         </div>
 
         <p className="text-xl text-bold font-Syne text-secondary">Frontend</p>
-        <ul class="list-disc lg:columns-5 columns-2 mx-6">
+        <ul className="list-disc lg:columns-5 columns-2 mx-6">
           <li>React</li>
           <li>Angular</li>
           <li>Next.js</li>
@@ -112,7 +112,7 @@ const About = () => {
           <li>Tailwind</li>
         </ul>
         <p className="text-xl text-bold font-Syne text-secondary">Backend</p>
-        <ul class="list-disc lg:columns-5 columns-2 mx-6">
+        <ul className="list-disc lg:columns-5 columns-2 mx-6">
           <li>Python</li>
           <li>Java</li>
           <li>C++</li>
@@ -122,14 +122,14 @@ const About = () => {
           <li>Flask</li>
         </ul>
         <p className="text-xl text-bold font-Syne text-secondary">Database/Cloud</p>
-        <ul class="list-disc lg:columns-5 columns-2 mx-6">
+        <ul className="list-disc lg:columns-5 columns-2 mx-6">
           <li>MongoDB</li>
           <li>PostgreSQL</li>
           <li>GCP/Firebase</li>
           <li>AWS</li>
         </ul>
         <p className="text-xl text-bold font-Syne text-secondary">Tools</p>
-        <ul class="list-disc lg:columns-5 columns-2 mx-6">
+        <ul className="list-disc lg:columns-5 columns-2 mx-6">
           <li>Git</li>
           <li>GitHub</li>
           <li>Docker</li>

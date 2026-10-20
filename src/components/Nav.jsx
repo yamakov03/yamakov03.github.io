@@ -1,5 +1,7 @@
 import { useState } from "react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import AnchorLinkModule from "react-anchor-link-smooth-scroll";
+
+const AnchorLink = AnchorLinkModule.default ?? AnchorLinkModule;
 import { useMediaQuery } from "@react-hook/media-query";
 import { Turn as Hamburger } from "hamburger-react";
 
@@ -30,7 +32,7 @@ const Navbar = ({ isTopOfPage, Page, setPage }) => {
   return (
     <>
       <nav
-        className={`${isTopOfPage ? "" : "bg-base-100 backdrop-blur-2xl bg-opacity-70  border-black border-b-[1px]"
+        className={`${isTopOfPage ? "" : "bg-base-100/70 backdrop-blur-2xl border-black border-b-[1px]"
           } z-50 w-full fixed top-0 py-1  `}
       >
         <div className="flex items-center justify-between w-5/6 mx-auto ">
@@ -72,7 +74,7 @@ const Navbar = ({ isTopOfPage, Page, setPage }) => {
       </nav>
       {/* MOBILE MENU POPUP */}
       {isMobile && isToggled && (
-        <div className="fixed right-0 bottom-0 h-full w-[200px] bg-base-100 backdrop-blur-2xl bg-opacity-70 border-l-[1px] border-black z-30" >
+        <div className="fixed right-0 bottom-0 h-full w-[200px] bg-base-100/70 backdrop-blur-2xl border-l-[1px] border-black z-30" >
           {/* MENU ITEMS */}
           <div className="ml-[12%] mt-[20vh] font-Darker_Grotesque">
             <div className="mb-4">

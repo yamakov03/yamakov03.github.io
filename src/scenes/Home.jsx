@@ -1,4 +1,6 @@
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import AnchorLinkModule from "react-anchor-link-smooth-scroll";
+
+const AnchorLink = AnchorLinkModule.default ?? AnchorLinkModule;
 import SocialMediaIcons from "../components/SMIcons";
 import Resume from "../components/Resume";
 
@@ -54,7 +56,7 @@ const Home = ({ setPage }) => {
             className="text-xl inline-flex items-center justify-center
             rounded-xl border-[1px] border-black bg-secondary px-5 py-3
             font-bold shadow-[6px_6px_0_0_#000] transition hover:shadow-none 
-            focus:outline-none focus:shadow-none focus:ring-0 w-[170px] hover:border-black btn-lg btn btn-secondary"
+            focus:outline-hidden focus:shadow-none focus:ring-0 w-[170px] hover:border-black btn-lg btn btn-secondary"
             href="#contact"
           >
             Say hello 👋

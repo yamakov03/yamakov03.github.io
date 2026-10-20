@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { HiArrowLeft, HiArrowNarrowRight } from "react-icons/hi";
 import Header from "../components/Header";
-import { Carousel, Flowbite } from "flowbite-react";
+import { Carousel } from "flowbite-react";
 
 const Project = ({ title, altTitle, desc, link, tag, note = "" }) => {
   const projectTitle = altTitle.split(" ").join("-").toLowerCase();
@@ -28,7 +28,7 @@ const Project = ({ title, altTitle, desc, link, tag, note = "" }) => {
         <p className="mt-5 text-md lg:text-xl">{desc}</p>
         <a href={link} className={`${link !== "" ? "visible" : "hidden"}`}>
 
-          <div class={`flex items-center ${note !== "" ? "tooltip tooltip-secondary" : ""}`} data-tip={note}>
+          <div className={`flex items-center ${note !== "" ? "tooltip tooltip-secondary" : ""}`} data-tip={note}>
             <p className={"me-[5px] font-semibold my-2"}>Check it out </p>
             <HiArrowNarrowRight />
           </div>
@@ -61,20 +61,20 @@ function Projects() {
           <Header text="Projects" />
         </div>
         <Carousel pauseOnHover slide slideInterval={3000} rightControl={
-          <button className="btn btn-circle border-none absolute end-4 bottom-[-45px] shadow-none bg-opacity-10 hover:bg-base-200 bg-base-100">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+          <span className="btn btn-circle border-none absolute end-4 bottom-[-45px] shadow-none bg-base-100/10 hover:bg-base-200">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
             </svg>
 
-          </button>
+          </span>
         } leftControl={
-          <button className="btn btn-circle absolute start-0 bottom-[-45px]  border-none shadow-none bg-opacity-10 hover:bg-base-200 bg-base-100">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+          <span className="btn btn-circle absolute start-0 bottom-[-45px]  border-none shadow-none bg-base-100/10 hover:bg-base-200">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
             </svg>
 
-          </button>
-        } class="max-w-[1300px] relative space-x-4 p-2 w-full">
+          </span>
+        } className="max-w-[1300px] relative space-x-4 p-2 w-full">
           <Project
             title="colorify."
             altTitle="colorify"
