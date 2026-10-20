@@ -1,26 +1,316 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&family=Syne:wght@700;800&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <title>DY Portfolio</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script type="module" src="/src/index.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daniel Yamakov</title>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #1a1a1a;
+      font-family: "Work Sans", "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 2.75rem 1.25rem 4rem;
+    }
+
+    .intro {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .intro img {
+      width: 4.75rem;
+      height: 4.75rem;
+      object-fit: cover;
+      display: block;
+    }
+
+    .shot {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: 0.75rem;
+      border: 1px solid #ddd;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.65rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .sub {
+      margin: 0.3rem 0 0;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1.1rem;
+      margin-top: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    section {
+      margin-top: 2.25rem;
+    }
+
+    h2 {
+      margin: 0 0 0.25rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      padding: 0.8rem 0;
+      border-top: 1px solid #ddd;
+    }
+
+    li:last-child {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .line {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    .when {
+      color: #444;
+      white-space: nowrap;
+    }
+
+    li p {
+      margin: 0.2rem 0 0;
+    }
+
+    .where {
+      color: #444;
+    }
+
+    .aside {
+      color: #444;
+    }
+
+    .roles li {
+      padding: 0.7rem 0 0.05rem 1rem;
+      border: 0;
+    }
+
+    .roles li:last-child {
+      border-bottom: 0;
+    }
+
+    a.item {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 640px) {
+      .line {
+        flex-direction: column;
+        gap: 0.1rem;
+      }
+
+      .when {
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header class="intro">
+      <img src="assets/profileImg.jpeg" alt="Daniel Yamakov" />
+      <div>
+        <h1>Daniel Yamakov</h1>
+        <p class="sub">Software Engineer II @ SpaceX<br />MS Computer Science @ Georgia Tech</p>
+      </div>
+    </header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="https://github.com/yamakov03">GitHub</a>
+      <a href="https://www.linkedin.com/in/danielyamakov/">LinkedIn</a>
+      <a href="assets/dy_resume_2024.pdf">Resume</a>
+    </nav>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>I'm a software engineer at SpaceX, working on scheduling software for Starship production and launch. I'm also
+        completing my MS CS online at Georgia Institute of Technology. I got my BS in Electrical and Computer
+        Engineering at The University of Texas at Austin. I like building software and making cool things.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <div class="line"><strong>SpaceX</strong><span class="when">Jul 2024 - Present</span></div>
+          <ul class="roles">
+            <li>
+              <div class="line"><strong>Software Engineer II, Production and Launch Operations</strong><span
+                  class="when">Jun 2026 - Present</span></div>
+              <p class="where">Cape Canaveral, Florida</p>
+              <p>Leading Starship refurb and maintenance scheduling with launch ops, and rolled the platform out to
+                Hawthorne.</p>
+            </li>
+            <li>
+              <div class="line"><strong>Software Engineer II, Starship Production</strong><span class="when">Aug 2025 -
+                  May 2026</span></div>
+              <p class="where">Starbase, Texas</p>
+              <p>Scaled the production scheduler to 10,000+ weekly sessions across sites, and deployed it on the new pad
+                build.</p>
+            </li>
+            <li>
+              <div class="line"><strong>Software Engineer I, Starship Production</strong><span class="when">Jul 2024 -
+                  Aug 2025</span></div>
+              <p class="where">Starbase, Texas</p>
+              <p>Built the production scheduler that replaced Smartsheet and cut scheduling from weeks to days.</p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="line"><strong>Software Engineer Intern at Hewlett Packard Enterprise</strong><span
+              class="when">May 2023 - Jan 2024</span></div>
+          <p class="where">Houston, Texas</p>
+        </li>
+        <li>
+          <div class="line"><strong>AI/ML Engineer Intern at State Street</strong><span class="when">Jan 2023 - May
+              2023</span></div>
+          <p class="where">Austin, Texas</p>
+        </li>
+        <li>
+          <div class="line"><strong>Commercial Analyst Intern at Talen Energy</strong><span class="when">Jun 2022 - Aug
+              2022</span></div>
+          <p class="where">Houston, Texas</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <div class="line"><strong>MS Computer Science</strong><span class="when">2024 - Present</span></div>
+          <p>Georgia Institute of Technology</p>
+        </li>
+        <li>
+          <div class="line"><strong>BS Electrical and Computer Engineering</strong><span class="when">2021 - 2024</span>
+          </div>
+          <p>The University of Texas at Austin</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <div class="line"><a class="item"
+              href="https://chromewebstore.google.com/detail/colorify/fodfjfhlogpjbjgkoelbfddkahniiblg?hl=en"><strong>colorify.</strong></a><span
+              class="when">Chrome</span></div>
+          <p>An open-source MIT-licensed browser extension designed to modify the look of any web element, anywhere.
+            Available for Chrome.</p>
+          <a href="https://chromewebstore.google.com/detail/colorify/fodfjfhlogpjbjgkoelbfddkahniiblg?hl=en"><img
+              class="shot" src="assets/projects_gif/colorify.gif" alt="colorify"></a>
+        </li>
+        <li>
+          <div class="line"><a class="item" href="https://spotifynxt.vercel.app/"><strong>spotify-next</strong></a><span
+              class="when">Next.js</span></div>
+          <p>A refreshed Spotify client built with Next.js 13. Users can login with their Spotify account and access
+            their playlists, saved songs, and more.</p>
+          <p class="aside">Spotify API requires users to be added manually in dev mode. Please contact me for access.
+          </p>
+          <a href="https://spotifynxt.vercel.app/"><img class="shot" src="assets/projects_gif/spotifynext.gif"
+              alt="spotify-next"></a>
+        </li>
+        <li>
+          <div class="line"><a class="item" href="https://toolio-next.vercel.app/"><strong>Toolio</strong></a><span
+              class="when">Next.js</span></div>
+          <p>An example lightweight project management platform for developers to manage project resources. Built with
+            Next.js 14, MongoDB, and Material Tailwind.</p>
+          <a href="https://toolio-next.vercel.app/"><img class="shot" src="assets/projects_gif/toolio.gif"
+              alt="Toolio"></a>
+        </li>
+        <li>
+          <div class="line"><a class="item" href="https://justthenews-flask-app.onrender.com/"><strong>Just The
+                News</strong></a><span class="when">Flask</span></div>
+          <p>A real-time news parser built with Python and Flask. Users can search for news articles and view the latest
+            headlines.</p>
+          <p class="aside">The app might take a few seconds to load.</p>
+          <a href="https://justthenews-flask-app.onrender.com/"><img class="shot" src="assets/projects_gif/news.gif"
+              alt="Just The News"></a>
+        </li>
+        <li>
+          <div class="line"><a class="item" href="https://litenotes-flask-web-app.onrender.com/"><strong>Lite
+                Notes</strong></a><span class="when">Flask</span></div>
+          <p>A lightweight notes web app built with Python and Flask. Users can create, edit, and delete notes.</p>
+          <p class="aside">The app might take a few seconds to load.</p>
+          <a href="https://litenotes-flask-web-app.onrender.com/"><img class="shot"
+              src="assets/projects_gif/litenotes.gif" alt="Lite Notes"></a>
+        </li>
+        <li>
+          <div class="line"><a class="item" href="https://nyc-gallery-app.onrender.com/"><strong>NYC
+                Folio</strong></a><span class="when">Flask</span></div>
+          <p>My camera and Manhattan's touristy spots, bustling streets, and incredible architecture. Built with Python
+            and Flask.</p>
+          <p class="aside">The app might take a few seconds to load.</p>
+          <a href="https://nyc-gallery-app.onrender.com/"><img class="shot" src="assets/projects_gif/nyc.gif"
+              alt="NYC Folio"></a>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+</body>
+
 </html>

@@ -1,5 +1,5 @@
-# My Portfolio Website
+# Daniel Yamakov
 
-This is my portfolio website, built using React + Tailwind CSS. Thanks for stopping by!
+Static site. `index.html` is the page. There is no build step.
 
-__Note:__ The Master branch contains the source code while gh-pages contains the project build.
+GitHub Pages publishes the `master` branch.
