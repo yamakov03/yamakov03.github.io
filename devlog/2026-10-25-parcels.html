@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parcels · Daniel Yamakov</title>
+  <link rel="icon" href="../favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #1a1a1a;
+      font-family: "Work Sans", "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 2.75rem 1.25rem 4rem;
+    }
+
+    .brand {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .brand a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.7rem;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    article {
+      margin-top: 2.25rem;
+    }
+
+    .copy {
+      max-width: 40rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.65rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .when {
+      margin: 0.35rem 0 0;
+      color: #444;
+    }
+
+    h2 {
+      margin: 1.8rem 0 0.35rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0.55rem 0 0;
+    }
+
+    code {
+      font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    ul.plain {
+      list-style: disc;
+      margin: 0.55rem 0 0;
+      padding-left: 1.2rem;
+    }
+
+    ul.plain li {
+      padding: 0.12rem 0;
+    }
+
+    figure {
+      margin: 1rem 0 0;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+    }
+
+    figcaption {
+      margin-top: 0.35rem;
+      color: #444;
+      font-size: 0.92rem;
+    }
+
+    .end {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <p class="brand"><a href="../index.html">Daniel Yamakov</a></p>
+      <nav>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#education">Education</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#devlog">Dev log</a>
+        <a href="https://github.com/yamakov03">GitHub</a>
+        <a href="https://www.linkedin.com/in/danielyamakov/">LinkedIn</a>
+        <a href="../assets/DanielYamakov_Resume_Oct2026_web.pdf">Resume</a>
+      </nav>
+    </header>
+
+    <article>
+      <div class="copy">
+        <h1>Parcels</h1>
+        <p class="when">Oct 25, 2026</p>
+        <p>Parcels is a city builder. The parcel is the unit the rest of the city is built from: a lot with an owner,
+          a zoning envelope, a building, and frontage on a road. Households live on it, firms hire on it, trucks deliver
+          to it, and pipes serve it.</p>
+        <p>Trips, goods, money, and lanes have to add up. A trip has a purpose. A good has inventory. A lane has rules.
+          When a number shows up in the panel, it drills down to the household, the parcel, or the ledger that produced
+          it.</p>
+        <p>The window title still says Ground Truth. That was the working title in the design notes. The project is
+          Parcels.</p>
+        <p>You can paint parcels, lay a road graph, zone lots, and run the day. Power, water, sewage, schools, clinics,
+          a developer that builds empty lots, and buses are in. These shots are from that lab.</p>
+      </div>
+
+      <h2>A lot you can open</h2>
+      <div class="copy">
+        <p>Parcel 8 is a shop lot downtown. 1,690 m², zoned High, already at the height the zone allows. Twelve of
+          twenty-four jobs are filled, and the shelf is holding a stock of 8. The issue list says the jobs are
+          underfilled, and it says why the building stops here: the zone max is already High. The lot counts as
+          developable because it has a road and live power.</p>
+      </div>
+      <figure>
+        <a href="../assets/devlog/parcels/city.jpg"><img src="../assets/devlog/parcels/city.jpg"
+            alt="Night downtown in Parcels. High-rises with lit windows line a street grid, and the side panel is open on Parcel 8, a shop lot with 12 of 24 jobs filled."></a>
+        <figcaption>Parcel 8, a shop at the High envelope. Twelve of twenty-four jobs are filled, stock is 8.</figcaption>
+      </figure>
+
+      <h2>Zoning is an envelope</h2>
+      <div class="copy">
+        <p>Zoning sets what is legal on a lot: which uses, and how tall. Homes, shops, industry, and mixed use are the
+          paints. A claim merges with a neighbor of the same zone. The lot becomes developable once it touches a road
+          and has live power. A green outline means ready, amber means the claim is only partial, red means something
+          is in the way. In this view eight parcels are developable, four of them low density, none mid or high yet.</p>
+        <p>Empty lots fill in because a developer looks at them. Demand comes from households, rents, and firms, and
+          the building is that response. Up close, a homes lot shows the gates.</p>
+      </div>
+      <figure>
+        <a href="../assets/devlog/parcels/zones.jpg"><img src="../assets/devlog/parcels/zones.jpg"
+            alt="Zoning view of a night street grid. Colored outlines mark home, shop, industry, and mixed parcels. The side panel says eight parcels are developable."></a>
+        <figcaption>Homes, shops, industry, mixed. A lot needs a road and live power before it can build.</figcaption>
+      </figure>
+      <div class="copy">
+        <p>Parcel 2 is homes, 1,455 m², three households, density Low with room in the zone to go High. The step up to
+          Medium is four gates, and all four are open: power, water, and sewage are live, a school and a clinic can
+          catch the lot and still have a seat, and at least half the jobs in reach are filled. The panel says the next
+          developer pulse will raise the density. The issue list is empty. The clock on this run is day 1, morning
+          commute.</p>
+      </div>
+      <figure>
+        <a href="../assets/devlog/parcels/homes.jpg"><img src="../assets/devlog/parcels/homes.jpg"
+            alt="Developed blocks at night with the inspector open on Parcel 2, a homes lot. The upgrade panel reads Low to Medium, four of four gates, ready for the next developer pulse."></a>
+        <figcaption>Parcel 2. Four of four gates open, so the next developer pulse can take it from Low to Medium.</figcaption>
+      </figure>
+
+      <h2>Where trips want to go</h2>
+      <div class="copy">
+        <p>The blue strokes are origin-destination desire. They draw the trips from where they start to where they need
+          to end. Under them, the road graph is lanes and legal movements. One-ways and turn bans are build tools. A
+          path uses a movement the lanes allow. Load on a link becomes delay, and that delay is part of the cost of
+          driving, so a jammed street can send the next person onto their feet or onto a bus.</p>
+        <p>The road under the cursor in this shot has no walkers and 44 drivers. The legend splits the network into
+          free, busy, and jammed.</p>
+      </div>
+      <figure>
+        <a href="../assets/devlog/parcels/traffic.jpg"><img src="../assets/devlog/parcels/traffic.jpg"
+            alt="Traffic view of the city with blue desire lines converging on a downtown block. The toolbar shows One-way, Turn ban, and Bulldoze."></a>
+        <figcaption>Desire lines across the district. One-way, turn ban, and bulldoze sit under the map.</figcaption>
+      </figure>
+
+      <h2>Pipes, seats, and a radius</h2>
+      <div class="copy">
+        <p>Power and water are networks. Sewage is the third. A plant has capacity, and a conduit can lose pressure on
+          the way, so a lot can be dark while the plant is up. Clinic 2 has 120 seats, none taken, and a catchment of
+          200 meters. Seven parcels sit inside that radius. A homes lot will not clear its upgrade until a clinic and a
+          school can actually seat someone from there.</p>
+      </div>
+      <figure>
+        <a href="../assets/devlog/parcels/utilities.jpg"><img src="../assets/devlog/parcels/utilities.jpg"
+            alt="Utilities view. Yellow power lines and blue water lines run along the streets to a central junction. The side panel is open on Clinic 2, 0 of 120 seats filled, 200 meter catchment."></a>
+        <figcaption>Power in yellow, water in blue. Clinic 2 has 120 open seats and a 200 m catchment covering seven parcels.</figcaption>
+      </figure>
+
+      <h2>Buses on the same roads</h2>
+      <div class="copy">
+        <p>A bus line is a sequence of stops snapped to the road graph. The vehicle rides the roads between them. The
+          cyan path below is one route through the grid, stop by stop. From above, the same idea reads as a map:
+          numbered stops, direction along the curb, and a second color where another pattern shares the street.
+          Vehicles have a capacity. Walk, drive, and bus are compared on door-to-door time, and a slow ride loses.</p>
+      </div>
+      <figure>
+        <a href="../assets/devlog/parcels/transit-street.jpg"><img src="../assets/devlog/parcels/transit-street.jpg"
+            alt="A cyan bus route with stops numbered 1 through 8, following the streets between mid-rise blocks."></a>
+        <figcaption>Stops 1 through 8, along the curb. The line follows the streets.</figcaption>
+      </figure>
+      <figure>
+        <a href="../assets/devlog/parcels/transit-map.jpg"><img src="../assets/devlog/parcels/transit-map.jpg"
+            alt="Top-down map of transit routes in orange and cyan, with arrowheads and stops numbered 1 through 10 around a grid of blocks."></a>
+        <figcaption>The same kind of route from overhead. Numbered stops, direction along the street.</figcaption>
+      </figure>
+
+      <h2>The window is a view of the sim</h2>
+      <div class="copy">
+        <p>The simulator is Rust, and it is the authority. It owns households, firms, shipments, the lane graph, the
+          utility networks, transit, and the ledger. A tick is deterministic given the seed and the inputs. The window
+          sends commands, like place a road, set a zone, or follow a person, and reads snapshots and queries. The city
+          lives in the sim.</p>
+        <p>What you see here is the lab. A winit window, a wgpu pass for the roads and the extruded buildings, and egui
+          for the panels. The buildings are procedural boxes with lit windows, on purpose. Unreal Engine 5 is the later
+          client for a large map, on the same command and snapshot boundary. The sim still runs headless without it.</p>
+        <p>People are stored at two resolutions. Away from the camera they are cohorts and origin-destination flows.
+          Near the camera, or when you click one, they are a person with a real activity: work, school, shop, home.
+          Inventories, jobs, and money stay conserved either way. A large city stays honest because the residents are
+          real in the books, and only the ones in view are drawn one by one.</p>
+        <p>I run the lab locally with <code>cargo run -p groundtruth-lab</code>. The invariants run without a window,
+          <code>cargo test -p groundtruth-sim</code>.</p>
+
+        <h2>Later</h2>
+        <p>Lane tools are one-ways and turn bans. The ledger is expenses and revenues you can read. A full tax code,
+          rail, ships, and freight contracts are later, and so is the Unreal client. Freight today is trucks restocking
+          shops.</p>
+        <p>Four things have to stay true on this slice:</p>
+        <ul class="plain">
+          <li>Follow ten people and all ten reach a real destination.</li>
+          <li>Something sold in a shop traces back to a shipment.</li>
+          <li>Change a turn ban and the routes change.</li>
+          <li>A budget hole can be explained from the ledger in a minute.</li>
+        </ul>
+        <p class="end"><a href="../index.html#devlog">Back to the dev log</a></p>
+      </div>
+    </article>
+  </div>
+</body>
+
+</html>
