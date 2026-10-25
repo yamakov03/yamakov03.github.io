@@ -151,119 +151,124 @@
       <div class="copy">
         <h1>Parcels</h1>
         <p class="when">Oct 25, 2026</p>
-        <p>I'm making a city builder that doesn't have the issues of the leading builders, like Cities: Skylines. I
-          don't want demand that fights the city I'm actually building, traffic that ignores lanes, goods that never
-          really get delivered, or a city that becomes unplayable once it gets big. I want 60 fps, and I want to be able
-          to model a city up to Tokyo.</p>
-        <p>A parcel is a lot. It has an owner, zoning, a building, and a road it faces. People live there, jobs are
-          there, trucks deliver there, pipes serve it. If a number shows up in the panel, I should be able to click
-          through to the household, the lot, or the money behind it.</p>
-        <p>The title bar still says Ground Truth. That's what I called it in the design notes. The name is Parcels.</p>
-        <p>Right now I can paint lots, draw roads, zone them, and run the day. Power, water, sewage, schools, clinics,
-          a developer that fills empty lots, and buses are in. The city in these screenshots is small and it's holding
-          60 fps. I want that at the size of Tokyo too.</p>
+        <p>I'm making a city builder. Cities: Skylines is the one I keep arguing with. Demand that fights the city you
+          actually wanted, traffic that ignores lanes, goods that never show up, and the sim giving up once the city
+          gets big. I want 60 fps, and I want a city that can get as big as Tokyo. That's the goal, anyway.</p>
+        <p>A parcel is just a lot. Somebody owns it, zoning says what's allowed, there's a building, and it faces a
+          road. People live there, jobs are there, trucks show up, pipes run to it. When a number pops up in the panel,
+          I want to click it and land on the household, the lot, or the money behind it.</p>
+        <p>The title bar still says Ground Truth. That was the name in my notes. I've been calling it Parcels, and the
+          window hasn't gotten the memo.</p>
+        <p>Right now I can paint lots, draw roads, zone them, and let the day run. Power, water, sewage, schools,
+          clinics, a developer that builds on empty lots, and buses are all in. The city in these shots is tiny, and
+          it's happily sitting at 60 fps. I want the same thing when it's Tokyo-sized.</p>
       </div>
 
       <h2>Lots</h2>
       <div class="copy">
-        <p>Parcel 8 is a shop downtown. 1,690 m², zoned High, and it's already as tall as that zone allows. 12 of 24
-          jobs are filled, stock is 8. The panel says the jobs are underfilled, and that it can't go higher because the
-          zone max is already High. It can develop because it has a road and live power.</p>
+        <p>Parcel 8 is a shop downtown. 1,690 m², zoned High, and it's already as tall as the zone will let it get. 12
+          of 24 jobs are filled, and there's a stock of 8 on the shelf. The panel is a little annoyed about the empty
+          jobs, and it also tells me the building is stuck because High is the cap. Road and power are both live, so
+          the lot is allowed to be here.</p>
       </div>
       <figure>
         <a href="../assets/devlog/parcels/city.jpg"><img src="../assets/devlog/parcels/city.jpg"
             alt="Night downtown in Parcels. The side panel is open on Parcel 8, a shop with 12 of 24 jobs filled."></a>
-        <figcaption>Parcel 8. Shop, zoned High, 12 of 24 jobs filled, stock 8.</figcaption>
+        <figcaption>Parcel 8, already as tall as it's allowed to be.</figcaption>
       </figure>
       <div class="copy">
-        <p>Zoning is what you're allowed to build. I can paint homes, shops, industry, or mixed. If I
-          drag onto the same zone next door, they merge. A lot is ready to build once it touches a road and has power.
-          Green outline means ready, amber means I only claimed part of the lot, red means something is blocking it.
-          This map has 8 lots that can build, 4 of them low density, none mid or high yet.</p>
+        <p>Zoning is the rulebook for a lot. I paint homes, shops, industry, or mixed, and if I drag into the same zone
+          next door they merge. A lot can build once it touches a road and has power. Green means you're good, amber
+          means I only grabbed part of the lot, red means something's in the way. This map has 8 lots that can build.
+          Four of them are low density. Nobody has gone mid or high yet. Give it a minute.</p>
       </div>
       <figure>
         <a href="../assets/devlog/parcels/zones.jpg"><img src="../assets/devlog/parcels/zones.jpg"
             alt="Zoning view of a street grid at night, with colored outlines on home, shop, industry, and mixed lots."></a>
-        <figcaption>Homes, shops, industry, mixed. Green means the lot has a road and power.</figcaption>
+        <figcaption>Homes, shops, industry, mixed. Green means road and power are sorted.</figcaption>
       </figure>
       <div class="copy">
-        <p>Empty lots get something on them when a developer looks at them, from households, rent, and whether a firm
-          would actually open there. Parcel 2 is homes, 1,455 m², 3 households, density Low, and the zone goes up to
-          High. Moving it to Medium needs four checks, and all four pass: power, water, and sewage are on, a school and
-          a clinic can reach it and still have a seat, and at least half the jobs nearby are filled. The next developer
-          pass should raise the density. No issues on the lot. This run is day 1, morning commute.</p>
+        <p>Empty lots fill in when a developer looks at them. It checks households, rent, and whether a shop would
+          actually survive, and then maybe it builds. Parcel 2 is homes: 1,455 m², 3 households, density Low, with room
+          in the zone to go all the way to High. Stepping up to Medium takes four checks, and this lot passed all of
+          them. Power, water, and sewage are on. A school and a clinic can reach it and still have a free seat. At
+          least half the nearby jobs are filled. Next time the developer comes around, this one should grow. The issue
+          list is empty, which I'll take. The clock says day 1, morning commute.</p>
       </div>
       <figure>
         <a href="../assets/devlog/parcels/homes.jpg"><img src="../assets/devlog/parcels/homes.jpg"
             alt="Parcel 2 selected, a homes lot. The upgrade panel says Low to Medium, 4 of 4 checks passed."></a>
-        <figcaption>Parcel 2. All 4 checks passed, so it can go from Low to Medium.</figcaption>
+        <figcaption>Parcel 2 passed all 4 checks. It gets to grow.</figcaption>
       </figure>
 
       <h2>Traffic</h2>
       <div class="copy">
-        <p>The blue lines are trips, from where they start to where they need to end. Under that, roads are lanes and
-          the turns those lanes allow. I can mark a one-way or ban a turn. The path has to use a turn the lanes
-          actually have. If a link is loaded, that becomes delay, and that delay is part of the cost of driving, so the
-          next person might walk or take the bus instead.</p>
-        <p>The road I had selected here had 0 walkers and 44 drivers. The legend marks roads free, busy, or jammed.</p>
+        <p>The blue lines are trips. Where someone starts, and where they need to end up. Under that, roads are lanes,
+          and you can only turn where the lanes let you. I can make a street one-way or ban a turn, and the paths have
+          to deal with it. If a road is packed, driving costs more time, and the next person might walk or hop on the
+          bus.</p>
+        <p>The road I clicked here had 0 walkers and 44 drivers. The legend calls roads free, busy, or jammed. This one
+          is having a morning.</p>
       </div>
       <figure>
         <a href="../assets/devlog/parcels/traffic.jpg"><img src="../assets/devlog/parcels/traffic.jpg"
             alt="Blue trip lines over the city. The toolbar has One-way, Turn ban, and Bulldoze."></a>
-        <figcaption>Trip lines. The selected road has 0 walkers and 44 drivers.</figcaption>
+        <figcaption>0 walkers, 44 drivers. Rough commute.</figcaption>
       </figure>
 
       <h2>Utilities</h2>
       <div class="copy">
-        <p>Power and water are networks, and sewage is the third. A plant has a capacity, and some of it gets lost
-          along the way, so a lot can be out even when the plant is running. Clinic 2 has 120 seats, none taken, and a
-          200 m radius. 7 parcels are inside it. A homes lot won't upgrade unless a clinic and a school can actually
-          take someone from there.</p>
+        <p>Power and water are actual networks. Sewage is the third one. A plant has a capacity, and some of it leaks
+          off along the way, so a lot can go dark while the plant is running fine. Clinic 2 has 120 seats, zero
+          patients, a 200 m radius, and 7 parcels inside it. Very prepared for day 1. A homes lot won't level up until
+          a clinic and a school can actually take somebody.</p>
       </div>
       <figure>
         <a href="../assets/devlog/parcels/utilities.jpg"><img src="../assets/devlog/parcels/utilities.jpg"
             alt="Yellow power lines and blue water lines along the streets. Clinic 2 is selected, 0 of 120 seats filled."></a>
-        <figcaption>Power in yellow, water in blue. Clinic 2 has 120 open seats and a 200 m radius.</figcaption>
+        <figcaption>Power in yellow, water in blue. Clinic 2 is open and very empty.</figcaption>
       </figure>
 
       <h2>Buses</h2>
       <div class="copy">
-        <p>A bus line is stops snapped to the road, and the bus drives the streets between them. The cyan line is one
-          route, stops 1 through 8. The overhead shot is the same thing as a map: stop numbers, direction along the
-          curb, and a second color where another route shares the street. Buses have a capacity. Walk, drive, and bus
-          get compared on how long the whole trip takes. If the bus is slow, people don't take it.</p>
+        <p>Buses drive on the roads, same as everyone else. A line is a bunch of stops stuck to the curb, and the bus
+          follows the streets between them. The cyan one is stops 1 through 8. From above you get the stop numbers,
+          which way they're headed, and a second color where another route shares the street. Buses have a capacity.
+          Walk, drive, and bus get compared on the whole trip, and if the bus is crawling, people skip it.</p>
       </div>
       <figure>
         <a href="../assets/devlog/parcels/transit-street.jpg"><img src="../assets/devlog/parcels/transit-street.jpg"
             alt="A cyan bus route with stops 1 through 8 following the streets."></a>
-        <figcaption>Stops 1 through 8, along the streets.</figcaption>
+        <figcaption>Stops 1 through 8, sticking to the streets.</figcaption>
       </figure>
       <figure>
         <a href="../assets/devlog/parcels/transit-map.jpg"><img src="../assets/devlog/parcels/transit-map.jpg"
             alt="Top-down map of orange and cyan bus routes with numbered stops."></a>
-        <figcaption>Same routes from above.</figcaption>
+        <figcaption>Same routes, seen from above.</figcaption>
       </figure>
 
-      <h2>Code</h2>
+      <h2>The sim</h2>
       <div class="copy">
-        <p>The sim is Rust. It has the households, firms, shipments, lanes, utilities, buses, and the money. If the seed
-          and the inputs are the same, I get the same result. The window sends what I did, like placing a road, setting
-          a zone, or following someone, and reads a snapshot back.</p>
-        <p>This window is a viewer for working on it. winit, wgpu for the roads and the box buildings, egui for the
-          panels. The buildings are boxes with lit windows, which is fine for now. Unreal is the client I want later,
-          talking to the same sim. I can run the checks with no window.</p>
-        <p>Far from the camera, people are counts and trips. Near the camera, or if I click one, they're a person going
-          to work, school, a shop, or home. Jobs, goods, and money are tracked either way. Most of the city stays
-          aggregated. The area I'm looking at gets drawn one person at a time, which is how I want 60 fps at Tokyo
-          size.</p>
-        <p>Viewer: <code>cargo run -p groundtruth-lab</code>. Tests: <code>cargo test -p groundtruth-sim</code>.</p>
+        <p>The sim is Rust. That's the part I actually trust. Households, firms, shipments, lanes, utilities, buses,
+          and the money all live there. Same seed and same inputs, and I get the same city back. The window tells it
+          what I did, like placing a road, zoning a lot, or following some commuter, and then reads back what
+          happened.</p>
+        <p>The window is a workbench. winit, wgpu for the roads and buildings, egui for the panels. The buildings are
+          boxes with little lit windows. I like them. Unreal is the nicer client I want later, hooked up to this same
+          sim. The tests run with no window, which is great, because I can't debug a big city by squinting at it.</p>
+        <p>Far from the camera, people are counts and trips. Up close, or if I click one, they're a person headed to
+          work, school, a shop, or home. Jobs, goods, and money stay tracked the whole time. On a Tokyo-sized city,
+          most of it would stay as counts. The block I'm looking at is the one that gets drawn person by person. That's
+          how I'm hoping to keep 60 fps.</p>
+        <p>Look at it with <code>cargo run -p groundtruth-lab</code>. Check it with
+          <code>cargo test -p groundtruth-sim</code>.</p>
 
         <h2>So far</h2>
-        <p>Lane tools are one-ways and turn bans. The budget shows income and spending. Shops get restocked by truck.
-          A fuller tax setup, rail, ships, freight contracts, and the Unreal client are later.</p>
-        <p>For this version I want to follow 10 people and have all 10 actually get there, trace something sold in a
-          shop back to a delivery, change a turn ban and see the routes change, and be able to tell why the budget is
-          off in about a minute.</p>
+        <p>One-ways and turn bans work. The budget can show income and spending. Shops get restocked by truck. A real
+          tax setup, rail, ships, freight contracts, and the Unreal client are still on the list.</p>
+        <p>The bar for this version is pretty ordinary. Follow 10 people and watch all 10 actually arrive. Sell
+          something in a shop and trace it back to a delivery. Ban a turn and watch the traffic go around. If the city
+          is broke, I want to see why in about a minute.</p>
         <p class="end"><a href="../index.html#projects">Back to projects</a></p>
       </div>
     </article>
