@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parcels · Daniel Yamakov</title>
+  <link rel="icon" href="../favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #1a1a1a;
+      font-family: "Work Sans", "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 2.75rem 1.25rem 4rem;
+    }
+
+    .brand {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .brand a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1.1rem;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    article {
+      margin-top: 2.25rem;
+    }
+
+    .copy {
+      max-width: 40rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.65rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .when {
+      margin: 0.35rem 0 0;
+      color: #444;
+    }
+
+    .subtitle {
+      margin: 0.35rem 0 0;
+      color: #444;
+    }
+
+    h2 {
+      margin: 1.8rem 0 0.35rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0.55rem 0 0;
+    }
+
+    code {
+      font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    ul.plain {
+      list-style: disc;
+      margin: 0.55rem 0 0;
+      padding-left: 1.2rem;
+    }
+
+    ul.plain li {
+      padding: 0.12rem 0;
+    }
+
+    figure {
+      margin: 1rem 0 0;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+    }
+
+    figcaption {
+      margin-top: 0.35rem;
+      color: #444;
+      font-size: 0.92rem;
+    }
+
+    .end {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <p class="brand"><a href="../index.html">Daniel Yamakov</a></p>
+      <nav>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#education">Education</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="https://github.com/yamakov03">GitHub</a>
+        <a href="https://www.linkedin.com/in/danielyamakov/">LinkedIn</a>
+        <a href="../assets/DanielYamakov_Resume_Oct2026_web.pdf">Resume</a>
+      </nav>
+    </header>
+
+    <article>
+      <div class="copy">
+        <h1>Parcels</h1>
+        <p class="when">Oct 25, 2026</p>
+        <p>A city builder in the works. The goal is realism, 60 FPS, and support for Metro-level planning.</p>
+        <p>There's a problem with today's city builders. They are tough to scale, have unrealistic economies,
+          and allow you to build up land and have infinite money. I wanted to start from scratch, taking the learnings
+          from some of the most popular city builders out there, and create the city builder of my dreams.
+        </p>
+        <p>
+          This is my first devlog for this project I've been working on for the past few days. I am building it in Rust
+          and am using wgpu for rendering and winit + egui for the game's interface. So far, I have working zoning,
+          density modeling, roads, utilities, traffic AI, transit (buses for now), and a pixel-style mesh system that is
+          reminiscent of modern American cities.
+        </p>
+        <p>
+          The goal here is not to build reality, but to get as close to it as possible, and make it fun to play, too! I
+          aspire this game to achieve a minimum of 60 frames per second while also supporting populations upwards of
+          100k. I also want to add fine-tuned control over manufacturing and supply chain systems end-to-end, as well as
+          realistic transit systems. Here's what it looks like so far:
+        </p>
+      </div>
+
+      <figure>
+        <a href="../assets/devlog/parcels/city.jpg"><img src="../assets/devlog/parcels/city.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">A high-density city with mixed zoning (commercial and residential).</p>
+      <figure>
+        <a href="../assets/devlog/parcels/zones.jpg"><img src="../assets/devlog/parcels/zones.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">The zoning plots (in the evening).</p>
+      <figure>
+        <a href="../assets/devlog/parcels/homes.jpg"><img src="../assets/devlog/parcels/homes.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Low-density mixed zoning at night.</p>
+      <figure>
+        <a href="../assets/devlog/parcels/traffic.jpg"><img src="../assets/devlog/parcels/traffic.jpg"
+            alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Traffic heatmap.</p>
+      <figure>
+        <a href="../assets/devlog/parcels/utilities.jpg"><img src="../assets/devlog/parcels/utilities.jpg"
+            alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Utilities (electric, water, sewer). I decided to have water and sewer follow roads for
+        convenience.</p>
+      <figure>
+        <a href="../assets/devlog/parcels/transit-street.jpg"><img src="../assets/devlog/parcels/transit-street.jpg"
+            alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">A first pass at a bus line.</p>
+      <figure>
+        <a href="../assets/devlog/parcels/transit-map.jpg"><img src="../assets/devlog/parcels/transit-map.jpg"
+            alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">An improved bus line editor, with multi-line stops</p>
+      <h2>What's next</h2>
+      <p>This game will likely go through more iterations as I improve each individual system, and how they play with
+        each other. Long-term, I plan to swap out the visuals for a real game engine like Unreal Engine or Bevy Engine,
+        which is Rust-native. I don't want to get bogged down with these engines early on, so building out the sim core
+        (which would just ship as a .dll with the executable later) standalone has been a great way to iterate.</p>
+      <p>Thanks for reading! I'll keep making these to document the game through its development.</p>
+      <p class="end"><a href="../index.html#projects">Back to projects</a></p>
+    </article>
+  </div>
+</body>
+
+</html>
