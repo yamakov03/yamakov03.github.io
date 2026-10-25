@@ -161,7 +161,7 @@
         <p>The title bar still says Ground Truth. That's what I called it in the design notes. The name is Parcels.</p>
         <p>Right now I can paint lots, draw roads, zone them, and run the day. Power, water, sewage, schools, clinics,
           a developer that fills empty lots, and buses are in. The city in these screenshots is small and it's holding
-          60 fps. Tokyo is the target, not where this is today.</p>
+          60 fps. I want that at the size of Tokyo too.</p>
       </div>
 
       <h2>Lots</h2>
@@ -176,7 +176,7 @@
         <figcaption>Parcel 8. Shop, zoned High, 12 of 24 jobs filled, stock 8.</figcaption>
       </figure>
       <div class="copy">
-        <p>Zoning is what you're allowed to build, not the building. I can paint homes, shops, industry, or mixed. If I
+        <p>Zoning is what you're allowed to build. I can paint homes, shops, industry, or mixed. If I
           drag onto the same zone next door, they merge. A lot is ready to build once it touches a road and has power.
           Green outline means ready, amber means I only claimed part of the lot, red means something is blocking it.
           This map has 8 lots that can build, 4 of them low density, none mid or high yet.</p>
@@ -246,22 +246,21 @@
 
       <h2>Code</h2>
       <div class="copy">
-        <p>The sim is Rust. It has the households, firms, shipments, lanes, utilities, buses,           and the money. If the seed and the inputs are the same, I get the same result. The window sends what I did,
-          like placing a road, setting a zone,
-          or following someone, and reads a snapshot back.</p>
+        <p>The sim is Rust. It has the households, firms, shipments, lanes, utilities, buses, and the money. If the seed
+          and the inputs are the same, I get the same result. The window sends what I did, like placing a road, setting
+          a zone, or following someone, and reads a snapshot back.</p>
         <p>This window is a viewer for working on it. winit, wgpu for the roads and the box buildings, egui for the
           panels. The buildings are boxes with lit windows, which is fine for now. Unreal is the client I want later,
           talking to the same sim. I can run the checks with no window.</p>
-        <p>I don't simulate every person as a full agent all the time. Far from the camera they're counts and trips.
-          Near the camera, or if I click one, they're a person going to work, school, a shop, or home. Jobs, goods, and
-          money are tracked either way. Drawing a million people every frame is not how this hits 60 fps at Tokyo size.
-          Most of the city stays aggregated, and the part I'm looking at is the part that gets drawn one person at a
-          time.</p>
+        <p>Far from the camera, people are counts and trips. Near the camera, or if I click one, they're a person going
+          to work, school, a shop, or home. Jobs, goods, and money are tracked either way. Most of the city stays
+          aggregated. The area I'm looking at gets drawn one person at a time, which is how I want 60 fps at Tokyo
+          size.</p>
         <p>Viewer: <code>cargo run -p groundtruth-lab</code>. Tests: <code>cargo test -p groundtruth-sim</code>.</p>
 
         <h2>So far</h2>
-        <p>Lane tools are one-ways and turn bans. The budget is income and spending, not a full tax system yet. Shops
-          get restocked by truck. Rail, ships, freight contracts, and the Unreal client are later.</p>
+        <p>Lane tools are one-ways and turn bans. The budget shows income and spending. Shops get restocked by truck.
+          A fuller tax setup, rail, ships, freight contracts, and the Unreal client are later.</p>
         <p>For this version I want to follow 10 people and have all 10 actually get there, trace something sold in a
           shop back to a delivery, change a turn ban and see the routes change, and be able to tell why the budget is
           off in about a minute.</p>
