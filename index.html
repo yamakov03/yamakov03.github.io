@@ -151,6 +151,15 @@
       text-underline-offset: 3px;
     }
 
+    .end {
+      margin-top: 2.5rem;
+    }
+
+    .end a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     @media (max-width: 640px) {
       .line {
         flex-direction: column;
@@ -165,7 +174,7 @@
 </head>
 
 <body>
-  <div class="page">
+  <div class="page" id="top">
     <header class="intro">
       <img src="assets/profileImg.jpeg" alt="Daniel Yamakov" />
       <div>
@@ -255,10 +264,11 @@
       <h2>Projects</h2>
       <ul>
         <li>
-          <div class="line"><a class="item" href="devlog/2026-10-25-parcels.html"><strong>Parcels
-                [Devlog]</strong></a><span class="when">Oct 25, 2026</span></div>
+          <div class="line"><a class="item" href="devlog/parcels/2026-10-30/"><strong>Parcels
+                [Devlog]</strong></a><span class="when">Oct 30, 2026</span></div>
           <p>A city builder in the works. The goal is realism, 60 FPS, and support for Metro-level planning.</p>
-          <a href="devlog/2026-10-25-parcels.html"><img class="shot" src="assets/devlog/parcels/city.jpg"
+          <p class="aside"><a href="devlog/parcels/">All entries</a></p>
+          <a href="devlog/parcels/2026-10-30/"><img class="shot" src="devlog/parcels/2026-10-30/mixed.jpg"
               alt="Parcels"></a>
         </li>
         <li>
@@ -317,6 +327,7 @@
       </ul>
     </section>
 
+    <p class="end"><a href="#top">Back to top</a></p>
   </div>
 </body>
 

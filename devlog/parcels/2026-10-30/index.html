@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parcels · Daniel Yamakov</title>
+  <link rel="icon" href="../../../favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #1a1a1a;
+      font-family: "Work Sans", "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 2.75rem 1.25rem 4rem;
+    }
+
+    .brand {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .brand a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1.1rem;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    article {
+      margin-top: 2.25rem;
+    }
+
+    .copy {
+      max-width: 40rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.65rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .when {
+      margin: 0.35rem 0 0;
+      color: #444;
+    }
+
+    .subtitle {
+      margin: 0.35rem 0 0;
+      color: #444;
+    }
+
+    h2 {
+      margin: 1.8rem 0 0.35rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0.55rem 0 0;
+    }
+
+    code {
+      font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    ul.plain {
+      list-style: disc;
+      margin: 0.55rem 0 0;
+      padding-left: 1.2rem;
+    }
+
+    ul.plain li {
+      padding: 0.12rem 0;
+    }
+
+    figure {
+      margin: 1rem 0 0;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+    }
+
+    figure.small img {
+      width: auto;
+      max-width: 100%;
+    }
+
+    figcaption {
+      margin-top: 0.35rem;
+      color: #444;
+      font-size: 0.92rem;
+    }
+
+    .end {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page" id="top">
+    <header>
+      <p class="brand"><a href="../../../index.html">Daniel Yamakov</a></p>
+      <nav>
+        <a href="../../../index.html#about">About</a>
+        <a href="../../../index.html#experience">Experience</a>
+        <a href="../../../index.html#education">Education</a>
+        <a href="../../../index.html#projects">Projects</a>
+        <a href="https://github.com/yamakov03">GitHub</a>
+        <a href="https://www.linkedin.com/in/danielyamakov/">LinkedIn</a>
+        <a href="../../../assets/DanielYamakov_Resume_Oct2026_web.pdf">Resume</a>
+      </nav>
+    </header>
+
+    <article>
+      <div class="copy">
+        <h1>Parcels</h1>
+        <p class="when">Oct 30, 2026</p>
+        <p class="subtitle"><a href="../">All entries</a> · <a href="../2026-10-25/">Oct 25</a></p>
+        <p>The game has come quite a ways since my last dev log. These last rounds of iteration focused primarily on
+          appearance, feel, and performance. This meant rewriting the way the game handles rendering, procedural
+          generation, and simulation. I'll break down the changes below.</p>
+      </div>
+
+      <figure>
+        <a href="mixed.jpg"><img src="mixed.jpg" alt="Parcels"></a>
+      </figure>
+
+      <div class="copy">
+        <h2>Appearance</h2>
+        <p>The look is now a cool, glassy skyline instead of extruded beige blocks. I was inspired by Mirror's Edge and
+          SimCity (2013). I wanted to create an airy feel that is also grounded in reality, and looks like a place you
+          can visit.</p>
+        <ul class="plain">
+          <li>Buildings use a kit of masses (slabs, setbacks, chamfered boxes, rare cylinders), with floor-to-ceiling
+            grids, sheet glass, and varied roofs. Neighboring lots stay separated, and a parcel keeps the same building
+            when the camera moves or the sim remeshes.</li>
+          <li>Glass samples a sky environment (zenith, horizon, ground, sun) with Fresnel, so towers read as sky by day
+            and warm windows by night. Distant mullions and lane paint fade out before they shimmer.</li>
+          <li>Street trees are alpha-cut billboards. Signals, stop signs, and lamps read at street level. Cars have
+            headlights, taillights, and soft ground pools. Lamp light stays cool; window spill stays warm.</li>
+          <li>Roads draw as continuous curves, roundabouts, medians, bus lanes, and one-way arrows.</li>
+        </ul>
+        <p>
+          The UI also got a grand overhaul. I was inspired by <a href="https://www.anduril.com/">Anduril's
+            paper-style web interface</a> and bold font choices.
+          I wanted to create an interface that feels refined, yet also blends in with your city. If you notice, the
+          color of the background changes based on the time of day, turning a slight warm parchment color during
+          sunrise, white during the day, and a cool blue at night. It also has a slight translucency that gives it a
+          floating effect. I'm going for a utilitarian, edgy look that contrasts
+          well with the warmth of the city.
+        </p>
+      </div>
+
+      <figure>
+        <a href="utilities.jpg"><img src="utilities.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Power, water, and sewage on the grid. Bright is live, dim is a stub.</p>
+      <figure>
+        <a href="roads.jpg"><img src="roads.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">A curve, a roundabout, a tree median, and a highway.</p>
+      <figure>
+        <a href="sunset.jpg"><img src="sunset.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">The glass picks up the sunset.</p>
+      <figure>
+        <a href="facade.jpg"><img src="facade.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Floor-to-ceiling grids and sheet glass. Reflections here use SSR, and a baked snapshot of the
+        map fills the gap between the sky and the reflected content.</p>
+      <figure>
+        <a href="street.jpg"><img src="street.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Slabs and setbacks along a curved corner.</p>
+      <figure>
+        <a href="trees.jpg"><img src="trees.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Street trees, signals, and a lamp, down at the curb. Thanks to sixonetwo for creating <a
+          href="https://sketchfab.com/3d-models/lodbillboard-summer-trees-pack-d88d67f701c1438cbf5098ff27d4e1f2">this
+          awesome tree pack</a>!</p>
+
+      <div class="copy">
+        <h2>Feel</h2>
+        <p>The city not only looks like a real place but plays like one, with tools that match that.</p>
+        <ul class="plain">
+          <li>Trips leave the front door and stay on the road between work, school, shop, and home. Students walk to a
+            neighborhood school. Cars hold their lane instead of jumping, and queues stop at the bar instead of locking
+            the junction.</li>
+          <li>You can drag a person onto a road and walk it at eye height (about 3.5 m/s, faster with Shift). The street
+            HUD also disappears, giving you a great look at the city at street level.</li>
+          <li>Schools, clinics, fire, and police are civic buildings with wings and bays. Uncovered lots catch fire more
+            often; a truck can put it out, or the building burns down.</li>
+          <li>Inspect is a parcel card plus an Economy chart on a slim bottom bar. Tax rate and congestion toll are
+            sliders. Land value and a short “why” diagnose what is stuck. The clock starts at dawn.</li>
+        </ul>
+      </div>
+
+      <figure>
+        <a href="street-night.jpg"><img src="street-night.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Night street. Windows stay warm, lamps stay cool, and the trees are billboards. This shot is
+        the
+        walking view.</p>
+      <figure class="small">
+        <a href="street-drop.jpg"><img src="street-drop.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">The person you drag onto a road to enter the walking view.</p>
+      <figure>
+        <a href="clinics.jpg"><img src="clinics.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Contextual UI for placing a clinic and reading its catchment.</p>
+      <figure>
+        <a href="clinic.jpg"><img src="clinic.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Contextual UI for the selected clinic, including its wings.</p>
+
+      <div class="copy">
+        <h2>Performance</h2>
+        <p>The sim is sized for a full morning at city scale. I moved the simulation off of the main core, so it now
+          runs parallel with the UI thread. This means even if the simulation slows down, you still get a buttery 60
+          frames per second. Disconnecting the sim from the UI has been a great move, and we'll see how well it holds up
+          as a city scales past 100k; the smoke tests have been green so far!</p>
+        <ul class="plain">
+          <li>A 100k-resident metro holds a frame at 60 fps and 10× speed. Residents sit on wake lists; only a capped
+            set is lane-simulated, and the screen instances published poses.</li>
+          <li>The sim clock runs on its own worker. Behavior, economy, and services are staggered across the tick so
+            they do not all land on tick 0. Each trip loads only the link it is on, and routing reuses cached
+            corridors.</li>
+          <li>Far buildings stay on cheap mass and silhouette detail. A megalopolis seed exists specifically to stress
+            the 100k morning.</li>
+        </ul>
+        <p>
+          One note on traffic and agent simulation - similar games (like Cities Skylines 2) actually render each
+          individual
+          agent, and creates pathfinding jobs that are split across your computer's cores. This may seem enticing at
+          first, but this means that the limit is no longer a hard cap, but rather how good your hardware is.
+          This isn't a great model, and there is a better solution. </p>
+
+        <p>I agree with this <a
+            href="https://korawichmawinkavee.medium.com/but-whats-wrong-with-agent-based-simulation-a93d637bd38c">Medium
+            article that Korawich Kavee wrote</a> - "going back to purely statistical cities feels lifeless, but purely
+          agent-based like 1 to 1 is probably too much." That's the approach I am taking with Parcels, and why I am
+          modeling agents as "groups" rather than "individuals". The idea here is that an agent will make the
+          same route choice as a similar agent, based on age, education, occupation, and residency to start. This allows
+          me to
+          pathfind and perform calculations on batches, which generally scales well as a city grows (you can just
+          increase batch size).
+        </p>
+        <p>Of course, this works on a macro level. But as soon as you zoom into a specific corridor or street, the batch
+          gets split up and agents pathfind individually. You get the theater without the overhead!</p>
+      </div>
+
+      <div class="copy">
+        <h2>What's next</h2>
+        <p>
+          I did mention in my previous dev log that I was planning on adding an actual game engine. I realized,
+          however, that writing everything from scratch in pure Rust gives me a lot of control over how the game runs
+          and looks, and allows me to only support the things I really need. This means I can <a
+            href="https://news.ycombinator.com/item?id=20887228">drop features and optimize</a>.
+        </p>
+        <p>
+          There's something to be said of how fun it is to build your own screen space reflections (SSR) and shadow
+          maps. It's also been incredibly rewarding to iterate quickly and see the city come to life. Up next, I want to
+          tackle increasing the simulation's depth. This means adding more density levels, adding multi-modal transit,
+          modeling various industry types to match commercial and mixed zoning shipping, and improve the traffic model.
+        </p>
+        <p>
+          I also want to improve the city's street manners and make it feel more alive. Maybe I add more randomness to
+          the simulation, better modeling of vehicles and agents, or even add weather and seasons for atmosphere. One
+          thing I was thinking of doing too is at the street level, you could walk into a building and grab a coffee, or
+          walk past agents and talk with them! There's a lot I want to do here to make this city builder feel really
+          special. Thanks for reading!
+        </p>
+      </div>
+
+      <figure>
+        <a href="homes.jpg"><img src="homes.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="end"><a href="#top">Back to top</a> · <a href="../../../index.html#projects">Back to projects</a></p>
+    </article>
+  </div>
+</body>
+
+</html>
