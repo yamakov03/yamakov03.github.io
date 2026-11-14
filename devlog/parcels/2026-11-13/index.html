@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parcels · Daniel Yamakov</title>
+  <link rel="icon" href="../../../favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: #1a1a1a;
+      font-family: "Work Sans", "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 2.75rem 1.25rem 4rem;
+    }
+
+    .brand {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    .brand a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 1.1rem;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    article {
+      margin-top: 2.25rem;
+    }
+
+    .copy {
+      max-width: 40rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.65rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .when {
+      margin: 0.35rem 0 0;
+      color: #444;
+    }
+
+    .subtitle {
+      margin: 0.35rem 0 0;
+      color: #444;
+    }
+
+    h2 {
+      margin: 1.8rem 0 0.35rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0.55rem 0 0;
+    }
+
+    code {
+      font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    ul.plain {
+      list-style: disc;
+      margin: 0.55rem 0 0;
+      padding-left: 1.2rem;
+    }
+
+    ul.plain li {
+      padding: 0.12rem 0;
+    }
+
+    figure {
+      margin: 1rem 0 0;
+    }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+    }
+
+    figure.small img {
+      width: auto;
+      max-width: 100%;
+    }
+
+    figcaption {
+      margin-top: 0.35rem;
+      color: #444;
+      font-size: 0.92rem;
+    }
+
+    .end {
+      margin-top: 2rem;
+    }
+
+    .legal {
+      margin: 1.25rem 0 0;
+      color: #999;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page" id="top">
+    <header>
+      <p class="brand"><a href="../../../index.html">Daniel Yamakov</a></p>
+      <nav>
+        <a href="../../../index.html#about">About</a>
+        <a href="../../../index.html#experience">Experience</a>
+        <a href="../../../index.html#education">Education</a>
+        <a href="../../../index.html#projects">Projects</a>
+        <a href="https://github.com/yamakov03">GitHub</a>
+        <a href="https://www.linkedin.com/in/danielyamakov/">LinkedIn</a>
+        <a href="../../../assets/DanielYamakov_Resume_Oct2026_web.pdf">Resume</a>
+      </nav>
+    </header>
+
+    <article>
+      <div class="copy">
+        <h1>Parcels</h1>
+        <p class="when">Nov 13, 2026</p>
+        <p class="subtitle"><a href="../">All entries</a> · <a href="../2026-10-30/">Oct 30</a></p>
+        <p>Howdy! I've been hard at work adding a bunch of new functionality to the game, as well as some much-needed
+          performance improvements. In this dev log, you'll see some important systems begin to take shape, like public
+          transit, industry, traffic AI, visuals, and more.</p>
+      </div>
+
+      <figure>
+        <a href="night.jpg"><img src="night.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Metro at night.</p>
+
+      <div class="copy">
+        <h2>Roads</h2>
+        <p>Roads received an overhaul. They are now modeled with a modular lane system, and you make any combination of
+          lanes you want to produce a road.
+          Choose from
+          car, bus, median, shoulder, parking, tram, light rail (yes, light rail!), bike, or a promenade. You can also
+          set the sidewalk
+          width, street trees, a speed limit, and save the preset to use it later. Upcoming is more fine-tuned control
+          on intersections, allowing you to set priority or yield, map specific lanes from one to another, change
+          traffic signal behavior, and more!</p>
+        <p>Roads now also support elevation and various bridge designs. Up next would be to add tunnels (already in work
+          for the train system I'm adding).</p>
+      </div>
+
+      <figure>
+        <a href="road-designer.jpg"><img src="road-designer.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">The new road designer tool.</p>
+
+      <div class="copy">
+        <h2>Industry</h2>
+        <p>Industry now has specialization - you can choose what a industry parcel should be making or extracting. You
+          can also take a look at the map for where natural resources are located, and build a parcel on top. Depending
+          on the current market conditions (what's paying the most or in demand right now), the parcel will
+          auto-specialize. If you have a surplus in a resource, your city exports it to neighbors. You can levy taxes on
+          those exports, as well as imports, on a per-resource basis. This gives you great control over how the economy
+          flows.</p>
+      </div>
+
+      <figure>
+        <a href="harrison-mills.jpg"><img src="harrison-mills.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">The parcel card for an industrial lot.</p>
+
+      <div class="copy">
+        <p>The industry chain is the city-wide view of these lots. Grain, timber, ore, and oil sit on the left. Food,
+          lumber,
+          metal, fuel, goods, machinery, chemicals, chips, and electronics sit in the middle. Medicine, services,
+          vehicles, homes, and freight sit on the right, and spoiled goods fall out when something in the chain stalls.
+          The color indicates a surplus, tight margin, or deficit.</p>
+      </div>
+
+      <figure>
+        <a href="chain.jpg"><img src="chain.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">The day’s flow, from raw materials to homes, freight, and spoilage.</p>
+      <figure>
+        <a href="products.jpg"><img src="products.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Prices, taxes, and the subsidy, with the plants filtered onto the map.</p>
+
+      <div class="copy">
+        <h2>On the street</h2>
+        <p>Streets look so much better, and I'm real happy with how it turned out. Lights actually cast light onto
+          materials, curbs were redesigned so that meshes don't cut into terrain, and streets get names! You can
+          actually see street names on the map as you pan and zoom around. This also means each parcel gets an address.
+        </p>
+      </div>
+
+      <figure>
+        <a href="fairbanks.jpg"><img src="fairbanks.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Fairbanks Lane.</p>
+
+      <div class="copy">
+        <p>A block over, traffic looks pretty heavy. You can inspect or follow vehicles and people. Totally extra, but
+          you can also ride the bus by walking up to it or clicking Ride Along! I plan on adding a bunch of these
+          interactive elements so you can feel like a real citizen of the city you are building.</p>
+      </div>
+      <figure>
+        <a href="grand-avenue.jpg"><img src="grand-avenue.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Grand Avenue.</p>
+
+      <figure>
+        <a href="ride-bus.jpg"><img src="ride-bus.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Ride the bus!</p>
+
+      <div class="copy">
+        <h2>Regional planning and Land Purchase</h2>
+        <p>The map currently is a solid 25km by 25km, and, if performance allows, I'll try to scale it up to the limit.
+          With play testing on a 100k gigacity, I was able to get 60fps and up to 5x tick speed on the sim (on an M1
+          MacBook Pro)! I might go into these performance stats in a later dev log. I copied a
+          metro demo city 20x to stress test. The next stress test would be a 100x test of the metro (500k population).
+        </p>
+        <p>I also added purchasable map tiles that follow the contours of the generated environment. It's a bit more
+          interesting than a monotonous grid, and is more like what real-world city land purchases would look like.</p>
+      </div>
+
+      <figure>
+        <a href="region.jpg"><img src="region.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Priced tiles outside the city. Price takes into account existing land purchased, natural
+        resources, and land area.</p>
+
+      <div class="copy">
+        <h2>Outside the City</h2>
+        <p>New tree designs and seasons create beautiful environments. Maps are also all generated and seed-based, so
+          there are a wide variety of map designs to fit every play style.</p>
+      </div>
+
+      <figure>
+        <a href="autumn.jpg"><img src="autumn.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Fall color with early snow - one of my most favorite shots.</p>
+      <figure>
+        <a href="power.jpg"><img src="power.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">Transmission towers along a snowy block at sunrise.</p>
+      <figure>
+        <a href="waterfront.jpg"><img src="waterfront.jpg" alt="Parcels"></a>
+      </figure>
+      <p class="subtitle">The downtown skyline with SSR reflections in the water.</p>
+
+      <div class="copy">
+        <h2>What's next - A city among cities</h2>
+        <p>Right now, the gameplay loop feels quite repetitive, as many other sims of this nature are. Have demand?
+          Build a grid, zone, place services. More demand? Repeat. There isn't much more to it, unless you get really
+          deep into the design details. Yes, money can get tight, and this game also has a comprehensive economic model
+          that
+          takes into account things like trade taxes, credit rating, and neighbor pressure, but I don't think it is
+          enough. What makes a good grand strategy game?</p>
+        <p>To solve this problem, I bring in the neighbors. Your peer cities want everything you do: they want their
+          city to prosper, have an edge on taxes, bring in more money, and increase in population. All the while, you
+          need to choose whether to play nice or dirty - cooperate, or undercut the competitors. Then you have the
+          state. They fund big projects, for a price. You also have citizen representatives, land developers, and
+          industry magnates all vying for your attention. Every reply you make changes things, and your decisions stick
+          for many months or
+          years to come.</p>
+        <p>You, Mr. City Planner, have a big job ahead of you. </p>
+      </div>
+
+      <p class="end"><a href="#top">Back to top</a> · <a href="../../../index.html#projects">Back to projects</a></p>
+      <p class="legal">© 2026 Daniel Yamakov</p>
+    </article>
+  </div>
+</body>
+
+</html>
